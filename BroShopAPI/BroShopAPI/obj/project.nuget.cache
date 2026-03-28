@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "wBa3qCWUmfU=",
+  "dgSpecHash": "eqKPBfdN0wY=",
   "success": true,
-  "projectFilePath": "C:\\Users\\joil\\Desktop\\trueCP\\BroShopAPI\\BroShopAPI\\BroShopAPI.csproj",
+  "projectFilePath": "C:\\Users\\joil\\Desktop\\(TheReal)CP_Project\\BroShopAPI\\BroShopAPI\\BroShopAPI.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\joil\\.nuget\\packages\\azure.core\\1.38.0\\azure.core.1.38.0.nupkg.sha512",
     "C:\\Users\\joil\\.nuget\\packages\\azure.identity\\1.11.4\\azure.identity.1.11.4.nupkg.sha512",

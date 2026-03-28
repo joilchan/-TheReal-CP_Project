@@ -2,27 +2,55 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="BroShopApp.Pages.CartPage"
-             Title="CartPage">
-    
+             BackgroundColor="Black"
+             Shell.NavBarIsVisible="False">
+
     <Grid RowDefinitions="Auto, *, Auto">
-        <Label Grid.Row="0" Text="КОРЗИНА" TextColor="White" HorizontalOptions="Center" Margin="0,20" FontAttributes="Bold" FontSize="20"/>
+        <Label Grid.Row="0" Text="КОРЗИНА" TextColor="White" 
+               HorizontalOptions="Center" Margin="0,50,0,20" 
+               FontAttributes="Bold" FontSize="22" CharacterSpacing="2"/>
 
         <CollectionView Grid.Row="1" x:Name="CartCollection" Margin="20,0">
+            <CollectionView.EmptyView>
+                <VerticalStackLayout VerticalOptions="Center" HorizontalOptions="Center" Spacing="10">
+                    <Label Text="🛒" FontSize="50" HorizontalOptions="Center"/>
+                    <Label Text="Ваша корзина пуста" TextColor="Gray" HorizontalOptions="Center"/>
+                </VerticalStackLayout>
+            </CollectionView.EmptyView>
+
             <CollectionView.ItemTemplate>
                 <DataTemplate>
-                    <Grid ColumnDefinitions="80, *, Auto" Margin="0,10">
-                        <Image Source="{Binding Image}" Aspect="AspectFill" HeightRequest="80" WidthRequest="80"/>
-                        <VerticalStackLayout Grid.Column="1" VerticalOptions="Center" Margin="15,0">
-                            <Label Text="{Binding ProductName}" TextColor="White" FontAttributes="Bold"/>
-                            <Label Text="{Binding Size, StringFormat='Размер: {0}'}" TextColor="Gray"/>
-                            <Label Text="{Binding Price, StringFormat='{0:N0} ₽'}" TextColor="White"/>
-                        </VerticalStackLayout>
-                        <Label Grid.Column="2" Text="{Binding Quantity, StringFormat='x{0}'}" TextColor="White" VerticalOptions="Center"/>
-                    </Grid>
+                    <Border StrokeShape="RoundRectangle 15" Stroke="Transparent" 
+                            BackgroundColor="#1A1A1A" Margin="0,0,0,12" Padding="10">
+                        <Grid ColumnDefinitions="90, *, Auto">
+                            <Border Grid.Column="0" StrokeShape="RoundRectangle 10" HeightRequest="90" WidthRequest="90">
+                                <Image Source="{Binding Image}" Aspect="AspectFill"/>
+                            </Border>
+
+                            <VerticalStackLayout Grid.Column="1" VerticalOptions="Center" Margin="15,0">
+                                <Label Text="{Binding ProductName}" TextColor="White" FontSize="16" FontAttributes="Bold"/>
+                                <Label Text="{Binding Size, StringFormat='Размер: {0}'}" TextColor="#88FFFFFF" FontSize="13"/>
+                                <Label Text="{Binding Price, StringFormat='{0:N0} ₽'}" TextColor="White" FontSize="16" Margin="0,5,0,0"/>
+                            </VerticalStackLayout>
+
+                            <Label Grid.Column="2" Text="{Binding Quantity, StringFormat='x{0}'}" 
+                                   TextColor="#AAAAAA" VerticalOptions="Center" Margin="0,0,10,0"
+                                   FontAttributes="Bold"/>
+                        </Grid>
+                    </Border>
                 </DataTemplate>
             </CollectionView.ItemTemplate>
         </CollectionView>
 
-        <Button Grid.Row="2" Text="ОФОРМИТЬ ЗАКАЗ" Margin="20" BackgroundColor="White" TextColor="Black" CornerRadius="25"/>
+        <VerticalStackLayout Grid.Row="2" BackgroundColor="#1A1A1A" Padding="25">
+            <HorizontalStackLayout HorizontalOptions="Fill" Margin="0,0,0,15">
+                <Label Text="ИТОГО:" TextColor="Gray" VerticalOptions="Center" FontAttributes="Bold"/>
+            </HorizontalStackLayout>
+
+            <Button Text="ОФОРМИТЬ ЗАКАЗ" 
+                    BackgroundColor="White" TextColor="Black" 
+                    CornerRadius="28" HeightRequest="56" 
+                    FontAttributes="Bold"/>
+        </VerticalStackLayout>
     </Grid>
 </ContentPage>

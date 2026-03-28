@@ -204,14 +204,18 @@ namespace BroShopApp
 
         }
 
-        private void OnProfileClicked(object sender, TappedEventArgs e)
+        private async void OnCartClicked(object sender, EventArgs e)
         {
-
-        }
-
-        private void OnCartClicked(object sender, EventArgs e)
-        {
-
+            if (BroShopApp.Services.UserService.IsLoggedIn)
+            {
+                // Если залогинен — переходим в профиль
+                await Navigation.PushAsync(new CartPage());
+            }
+            else
+            {
+                // Если гость — на страницу логина
+                await Navigation.PushAsync(new LoginPage());
+            }
         }
         public void UpdateUserStatus(string login)
         {

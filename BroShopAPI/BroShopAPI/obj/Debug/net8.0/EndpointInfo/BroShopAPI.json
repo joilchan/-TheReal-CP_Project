@@ -95,17 +95,17 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/Cart"
+                "$ref": "#/components/schemas/CartDTO"
               }
             },
             "text/json": {
               "schema": {
-                "$ref": "#/components/schemas/Cart"
+                "$ref": "#/components/schemas/CartDTO"
               }
             },
             "application/*+json": {
               "schema": {
-                "$ref": "#/components/schemas/Cart"
+                "$ref": "#/components/schemas/CartDTO"
               }
             }
           }
@@ -415,6 +415,24 @@
           },
           "user": {
             "$ref": "#/components/schemas/User"
+          }
+        },
+        "additionalProperties": false
+      },
+      "CartDTO": {
+        "type": "object",
+        "properties": {
+          "userId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "productVariantId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "quantity": {
+            "type": "integer",
+            "format": "int32"
           }
         },
         "additionalProperties": false

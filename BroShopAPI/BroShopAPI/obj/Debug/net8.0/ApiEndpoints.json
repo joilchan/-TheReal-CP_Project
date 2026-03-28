@@ -28,8 +28,8 @@
     "Order": 0,
     "Parameters": [
       {
-        "Name": "cart",
-        "Type": "BroShopAPI.Models.Cart",
+        "Name": "dto",
+        "Type": "BroShopAPI.Models.CartDTO",
         "IsRequired": true
       }
     ],

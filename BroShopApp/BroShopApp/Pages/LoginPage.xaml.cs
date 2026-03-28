@@ -14,7 +14,7 @@ public partial class LoginPage : ContentPage
 
     private async void OnLoginSubmitClicked(object sender, EventArgs e)
     {
-        string email = LoginEntry.Text; // Убедись, что дал имена x:Name полям в XAML
+        string email = LoginEntry.Text;
         string password = PasswordEntry.Text;
 
         if (string.IsNullOrWhiteSpace(email) || string.IsNullOrWhiteSpace(password))
@@ -23,12 +23,10 @@ public partial class LoginPage : ContentPage
             return;
         }
 
-        // Блокируем кнопку, пока идет загрузка (чтобы не кликали дважды)
         var button = (Button)sender;
         button.IsEnabled = false;
         button.Text = "ЗАГРУЗКА...";
 
-        // Обращаемся к нашему API
         var user = await _apiService.LoginAsync(email, password);
 
         button.IsEnabled = true;
@@ -36,8 +34,13 @@ public partial class LoginPage : ContentPage
 
         if (user != null)
         {
-            // СОХРАНЯЕМ ДАННЫЕ В СЕРВИС
+            // 1. Сохраняем в оперативную память (как ты и делал)
             BroShopApp.Services.UserService.CurrentUser = user;
+
+            // 2. СОХРАНЯЕМ В ПОСТОЯННУЮ ПАМЯТЬ ТЕЛЕФОНА
+            // Теперь даже после перезагрузки мы будем знать, кто это
+            Preferences.Set("UserId", user.UserId);
+            Preferences.Set("UserName", user.FullName); // Можно еще имя сохранить для приветствия
 
             await Navigation.PopAsync();
         }

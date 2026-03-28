@@ -21,8 +21,8 @@ public partial class ProfilePage : ContentPage
 
     private async void OnLogoutClicked(object sender, EventArgs e)
     {
-        UserService.Logout(); // Стираем данные пользователя
-        await Navigation.PopAsync(); // Возвращаемся на главную
+        UserService.Logout();
+        await Navigation.PopAsync();
     }
 
     private async void OnBackClicked(object sender, EventArgs e)

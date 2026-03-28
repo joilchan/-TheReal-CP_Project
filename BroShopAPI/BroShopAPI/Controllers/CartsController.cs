@@ -31,18 +31,26 @@ namespace BroShopAPI.Controllers
 
         // Добавить или обновить товар в корзине
         [HttpPost]
-        public async Task<IActionResult> AddToCart(Cart cart)
+        public async Task<IActionResult> AddToCart(CartDTO dto) // Принимаем DTO, а не Cart
         {
+            // Ищем в БД по ID из DTO
             var existing = await _context.Carts
-                .FirstOrDefaultAsync(c => c.UserId == cart.UserId && c.ProductVariantId == cart.ProductVariantId);
+                .FirstOrDefaultAsync(c => c.UserId == dto.UserId && c.ProductVariantId == dto.ProductVariantId);
 
             if (existing != null)
             {
-                existing.Quantity += cart.Quantity;
+                existing.Quantity += dto.Quantity;
             }
             else
             {
-                _context.Carts.Add(cart);
+                // Создаем новую запись, мапя данные из DTO
+                var newCartEntry = new Cart
+                {
+                    UserId = dto.UserId,
+                    ProductVariantId = dto.ProductVariantId,
+                    Quantity = dto.Quantity
+                };
+                _context.Carts.Add(newCartEntry);
             }
 
             await _context.SaveChangesAsync();

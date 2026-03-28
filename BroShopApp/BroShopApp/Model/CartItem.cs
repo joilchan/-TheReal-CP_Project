@@ -4,7 +4,7 @@ using System.Text;
 
 namespace BroShopApp.Model
 {
-    public partial class CartItem
+    public class CartItem
     {
         public int ProductVariantId { get; set; }
         public int Quantity { get; set; }
@@ -15,7 +15,7 @@ namespace BroShopApp.Model
     }
 
     // Для отправки на сервер
-    public partial class CartDTO
+    public class CartDTO
     {
         public int UserId { get; set; }
         public int ProductVariantId { get; set; }

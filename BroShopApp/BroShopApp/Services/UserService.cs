@@ -13,6 +13,7 @@ namespace BroShopApp.Services
         // Метод для выхода
         public static void Logout()
         {
+            Preferences.Remove("UserId");
             CurrentUser = null;
         }
     }
