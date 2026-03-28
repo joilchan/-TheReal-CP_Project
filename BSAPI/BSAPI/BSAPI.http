@@ -1,6 +1,0 @@
-@BSAPI_HostAddress = http://localhost:5037
-
-GET {{BSAPI_HostAddress}}/weatherforecast/
-Accept: application/json
-
-###
