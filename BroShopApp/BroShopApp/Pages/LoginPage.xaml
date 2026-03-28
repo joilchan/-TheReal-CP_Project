@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BroShopApp.Pages.LoginPage"
+             NavigationPage.HasNavigationBar="False"
+             Shell.NavBarIsVisible="False"
+             BackgroundColor="Black">
+
+    <Grid>
+        <Image Source="background.jpg" Aspect="AspectFill" />
+
+        <VerticalStackLayout VerticalOptions="Center" Spacing="0" Padding="30">
+
+            <Image Source="bros_logo_white.png" HeightRequest="150" HorizontalOptions="Center" />
+
+            <Border StrokeShape="RoundRectangle 25" 
+                    Stroke="#30FFFFFF" 
+                    BackgroundColor="#1AFFFFFF" 
+                    Padding="25,40">
+
+                <VerticalStackLayout Spacing="20">
+                    <Label Text="ВХОД В АККАУНТ" 
+                           TextColor="White" 
+                           FontSize="20" 
+                           FontAttributes="Bold" 
+                           HorizontalOptions="Center" 
+                           Margin="0,0,0,10"/>
+
+                    <Border StrokeShape="RoundRectangle 15" Stroke="#40FFFFFF" BackgroundColor="#10FFFFFF" HeightRequest="55" Padding="15,0">
+                        <Entry x:Name="LoginEntry"
+                               Placeholder="Логин / Email" 
+                               PlaceholderColor="#70FFFFFF" 
+                               TextColor="White" 
+                               VerticalOptions="Center"
+                               Keyboard="Email"/>
+                    </Border>
+
+                    <Border StrokeShape="RoundRectangle 15" Stroke="#40FFFFFF" BackgroundColor="#10FFFFFF" HeightRequest="55" Padding="15,0">
+                        <Entry x:Name="PasswordEntry"
+                               Placeholder="Пароль" 
+                               PlaceholderColor="#70FFFFFF" 
+                               TextColor="White" 
+                               IsPassword="True" 
+                               VerticalOptions="Center"/>
+                    </Border>
+
+                    <Button Text="ВОЙТИ" 
+                            BackgroundColor="White" 
+                            TextColor="Black" 
+                            FontAttributes="Bold" 
+                            CornerRadius="25" 
+                            HeightRequest="55" 
+                            Margin="0,10,0,0"
+                            Clicked="OnLoginSubmitClicked"/>
+
+                    <Label Text="Забыли пароль?" 
+                           TextColor="#AAAAAA" 
+                           FontSize="12" 
+                           HorizontalOptions="Center" />
+                </VerticalStackLayout>
+            </Border>
+            
+            <HorizontalStackLayout Margin="15" HorizontalOptions="Center" Spacing="5">
+                <Label Text="Нет аккаунта?" TextColor="#88FFFFFF" />
+                <Label Text="Создать" TextColor="White" FontAttributes="Bold">
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="OnRegisterTapped" />
+                    </Label.GestureRecognizers>
+                </Label>
+            </HorizontalStackLayout>
+
+        </VerticalStackLayout>
+
+        <ImageButton Source="back_icon.png" 
+                     HorizontalOptions="Start" 
+                     VerticalOptions="Start" 
+                     Margin="15, 30, 0, 0" 
+                     HeightRequest="1"
+                     WidthRequest="1"
+                     Clicked="OnBackClicked"/>
+    </Grid>
+</ContentPage>

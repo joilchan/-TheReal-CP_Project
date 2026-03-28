@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:models="clr-namespace:BroShopApp.Model"
+             x:Class="BroShopApp.Pages.ProductDetailsPage"
+             NavigationPage.HasNavigationBar="False"
+             Shell.NavBarIsVisible="False"
+             BackgroundColor="Black">
+
+    <Grid>
+        <Image Source="background.jpg" Aspect="AspectFill" />
+
+        <Grid RowDefinitions="Auto, *">
+            <ScrollView Grid.Row="1" VerticalScrollBarVisibility="Never">
+                <Grid RowDefinitions="Auto, Auto">
+
+                    <Image Grid.Row="0"
+                           Source="{Binding ImageUrl}" 
+                           Aspect="AspectFill"
+                           HeightRequest="500" 
+                           HorizontalOptions="Fill"
+                           VerticalOptions="Start"/>
+
+                    <Border Grid.Row="1" 
+                            Margin="0,-60,0,0" 
+                            Padding="25,35,25,40" 
+                            StrokeShape="RoundRectangle 40,40,0,0" 
+                            Stroke="Transparent"
+                            BackgroundColor="#FF1A1A1A">
+                        <VerticalStackLayout Spacing="16">
+
+                            <VerticalStackLayout Spacing="2">
+                                <Label Text="{Binding Brand.Name}" TextColor="#AAAAAA" FontSize="12" FontAttributes="Bold" TextTransform="Uppercase"/>
+                                <Label Text="{Binding Name}" TextColor="White" FontSize="28" FontAttributes="Bold"/>
+                                <Label Text="{Binding Price, StringFormat='{0:N0} ₽'}" TextColor="White" FontSize="24" FontAttributes="Bold" Margin="0,5,0,0"/>
+                            </VerticalStackLayout>
+
+                            <Label Text="Размер" TextColor="White" FontSize="16" FontAttributes="Bold"/>
+
+                            <CollectionView ItemsSource="{Binding ProductVariants}" 
+                                            SelectionMode="Single"
+                                            HeightRequest="50">
+                                <CollectionView.ItemsLayout>
+                                    <LinearItemsLayout Orientation="Horizontal" ItemSpacing="10"/>
+                                </CollectionView.ItemsLayout>
+                                <CollectionView.ItemTemplate>
+                                    <DataTemplate>
+                                        <Border StrokeShape="RoundRectangle 12" 
+                                                Padding="15,0" 
+                                                HeightRequest="45">
+
+                                            <VisualStateManager.VisualStateGroups>
+                                                <VisualStateGroup Name="CommonStates">
+                                                    <VisualState Name="Normal">
+                                                        <VisualState.Setters>
+                                                            <Setter Property="BackgroundColor" Value="#20FFFFFF" />
+                                                            <Setter Property="Stroke" Value="#40FFFFFF" />
+                                                        </VisualState.Setters>
+                                                    </VisualState>
+                                                    <VisualState Name="Selected">
+                                                        <VisualState.Setters>
+                                                            <Setter Property="BackgroundColor" Value="#66FFFFFF" />
+                                                            <Setter Property="Stroke" Value="White" />
+                                                        </VisualState.Setters>
+                                                    </VisualState>
+                                                </VisualStateGroup>
+                                            </VisualStateManager.VisualStateGroups>
+
+                                            <Label Text="{Binding Size}" 
+                                                   TextColor="White" 
+                                                   VerticalOptions="Center" 
+                                                   HorizontalOptions="Center" 
+                                                   FontAttributes="Bold" 
+                                                   FontSize="14"/>
+                                        </Border>
+                                    </DataTemplate>
+                                </CollectionView.ItemTemplate>
+                            </CollectionView>
+
+                            <Label Text="О товаре" TextColor="White" FontSize="16" FontAttributes="Bold" Margin="0,10,0,0"/>
+                            <Label Text="{Binding Description}" TextColor="#CCFFFFFF" FontSize="15" LineHeight="1.3"/>
+
+                            <Button Text="В КОРЗИНУ" BackgroundColor="White" TextColor="Black" FontAttributes="Bold" 
+                                    CornerRadius="28" HeightRequest="56" Margin="0,20,0,0"/>
+
+                            <Label Text="Отзывы" TextColor="White" FontSize="18" FontAttributes="Bold" Margin="0,20,0,5"/>
+                            <CollectionView ItemsSource="{Binding Reviews}">
+                                <CollectionView.ItemTemplate>
+                                    <DataTemplate>
+                                        <Border Margin="0,0,0,12" Padding="15" StrokeShape="RoundRectangle 15" Stroke="Transparent" BackgroundColor="#10FFFFFF">
+                                            <VerticalStackLayout Spacing="4">
+                                                <HorizontalStackLayout Spacing="5">
+                                                    <Label Text="⭐" FontSize="12" VerticalOptions="Center"/>
+                                                    <Label Text="{Binding Rating}" TextColor="White" FontAttributes="Bold"/>
+                                                </HorizontalStackLayout>
+                                                <Label Text="{Binding Text}" TextColor="#99FFFFFF" FontSize="14"/>
+                                            </VerticalStackLayout>
+                                        </Border>
+                                    </DataTemplate>
+                                </CollectionView.ItemTemplate>
+                            </CollectionView>
+                        </VerticalStackLayout>
+                    </Border>
+                </Grid>
+            </ScrollView>
+        </Grid>
+
+        <ImageButton Source="back_icon.png" 
+                     HorizontalOptions="Start" 
+                     VerticalOptions="Start" 
+                     Margin="15, 30, 0, 0" 
+                     HeightRequest="40" 
+                     WidthRequest="40" 
+                     Clicked="OnBackClicked"/>
+    </Grid>
+</ContentPage>
