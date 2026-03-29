@@ -56,5 +56,22 @@ namespace BroShopAPI.Controllers
             await _context.SaveChangesAsync();
             return Ok();
         }
+
+        [HttpPut("update-quantity")]
+        public async Task<IActionResult> UpdateQuantity([FromBody] CartDTO dto)
+        {
+            var item = await _context.Carts
+                .FirstOrDefaultAsync(c => c.UserId == dto.UserId && c.ProductVariantId == dto.ProductVariantId);
+
+            if (item == null) return NotFound();
+
+            item.Quantity = dto.Quantity;
+
+            if (item.Quantity <= 0)
+                _context.Carts.Remove(item);
+
+            await _context.SaveChangesAsync();
+            return Ok();
+        }
     }
 }

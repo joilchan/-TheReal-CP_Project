@@ -5,6 +5,7 @@ using System.Diagnostics;
 using System.Net.Http.Json;
 using System.Text;
 using System.Text.Json;
+using static BroShopApp.Model.Product;
 
 namespace BroShopApp.Services
 {
@@ -122,6 +123,43 @@ namespace BroShopApp.Services
                 return await _httpClient.GetFromJsonAsync<List<CartItem>>($"carts/{userId}");
             }
             catch { return new List<CartItem>(); }
+        }
+
+        public async Task<bool> UpdateCartQuantityAsync(CartDTO cartDto)
+        {
+            try
+            {
+                // Используем PutAsJsonAsync, так как в контроллере мы прописали [HttpPut]
+                var response = await _httpClient.PutAsJsonAsync("carts/update-quantity", cartDto);
+                return response.IsSuccessStatusCode;
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine($"Ошибка обновления количества: {ex.Message}");
+                return false;
+            }
+        }
+
+        public async Task<bool> AddReviewAsync(Review review)
+        {
+            try
+            {
+                var response = await _httpClient.PostAsJsonAsync("reviews", review);
+
+                if (!response.IsSuccessStatusCode)
+                {
+                    // Читаем, что именно ответил сервер (там будет текст ошибки)
+                    string errorContent = await response.Content.ReadAsStringAsync();
+                    Debug.WriteLine($"СЕРВЕР ВЕРНУЛ ОШИБКУ: {response.StatusCode} - {errorContent}");
+                }
+
+                return response.IsSuccessStatusCode;
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine($"КРИТИЧЕСКАЯ ОШИБКА: {ex.Message}");
+                return false;
+            }
         }
     }
 }

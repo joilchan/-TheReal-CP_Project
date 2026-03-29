@@ -12,7 +12,7 @@
       <CodesignDisableTimestamp>true</CodesignDisableTimestamp>
       <CodesignKeychain></CodesignKeychain>
       <CodesignUseHardenedRuntime></CodesignUseHardenedRuntime>
-      <SourceProjectPath>C:\Users\joil\Desktop\trueCP\BroShopApp\BroShopApp</SourceProjectPath>
+      <SourceProjectPath>C:\Users\joil\Desktop\(TheReal)CP_Project\BroShopApp\BroShopApp</SourceProjectPath>
     </_CodesignBundle>
   </ItemGroup>
 </Project>

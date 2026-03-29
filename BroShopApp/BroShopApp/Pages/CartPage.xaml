@@ -33,9 +33,23 @@
                                 <Label Text="{Binding Price, StringFormat='{0:N0} ₽'}" TextColor="White" FontSize="16" Margin="0,5,0,0"/>
                             </VerticalStackLayout>
 
-                            <Label Grid.Column="2" Text="{Binding Quantity, StringFormat='x{0}'}" 
-                                   TextColor="#AAAAAA" VerticalOptions="Center" Margin="0,0,10,0"
-                                   FontAttributes="Bold"/>
+                            <HorizontalStackLayout Grid.Column="2" VerticalOptions="Center" Spacing="10">
+                                <Button Text="-" 
+                                        Clicked="OnDecreaseQuantityClicked"
+                                        CommandParameter="{Binding .}"
+                                        WidthRequest="35" HeightRequest="35" CornerRadius="17" Padding="0"
+                                        BackgroundColor="#333333" TextColor="White"/>
+
+                                <Label Text="{Binding Quantity}" 
+                                       TextColor="White" VerticalOptions="Center" 
+                                       WidthRequest="20" HorizontalTextAlignment="Center"/>
+
+                                <Button Text="+" 
+                                        Clicked="OnIncreaseQuantityClicked"
+                                        CommandParameter="{Binding .}"
+                                        WidthRequest="35" HeightRequest="35" CornerRadius="17" Padding="0"
+                                        BackgroundColor="#333333" TextColor="White"/>
+                            </HorizontalStackLayout>
                         </Grid>
                     </Border>
                 </DataTemplate>

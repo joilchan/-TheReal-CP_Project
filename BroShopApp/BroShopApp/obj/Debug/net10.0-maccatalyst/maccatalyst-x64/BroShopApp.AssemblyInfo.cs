@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("BroShopApp")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0+32396a6cc74557c94d7e4171449467b4bb3f7d19")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0+7e6f511f136c751650a7eb7a4bd7db00baa5dbd3")]
 [assembly: System.Reflection.AssemblyProductAttribute("BroShopApp")]
 [assembly: System.Reflection.AssemblyTitleAttribute("BroShopApp")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

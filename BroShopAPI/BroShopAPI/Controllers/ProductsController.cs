@@ -26,8 +26,8 @@ namespace BroShopAPI.Controllers
                 .Include(p => p.Brand)
                 .Include(p => p.ProductType)
                 .Include(p => p.ProductVariants)
-                .Include(p => p.ProductVariants) // Варианты размеров
                 .Include(p => p.Reviews)
+                .ThenInclude(r => r.User)
                 .ToListAsync();
         }
 
@@ -42,6 +42,7 @@ namespace BroShopAPI.Controllers
                 .Include(p => p.ProductType)
                 .Include(p => p.ProductVariants) // Варианты размеров
                 .Include(p => p.Reviews)
+                .ThenInclude(r => r.User)
                 .FirstOrDefaultAsync(p => p.ProductId == id);
 
             if (product == null)
