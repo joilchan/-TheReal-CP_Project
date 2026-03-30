@@ -9,34 +9,48 @@
 
     <ContentPage.Resources>
         <Style x:Key="FilterBtnStyle" TargetType="Button">
-            <Setter Property="BackgroundColor" Value="#20FFFFFF"/>
+            <Setter Property="BackgroundColor" Value="#15FFFFFF"/>
             <Setter Property="TextColor" Value="White"/>
-            <Setter Property="CornerRadius" Value="12"/>
-            <Setter Property="FontSize" Value="12"/>
-            <Setter Property="HeightRequest" Value="38"/>
-            <Setter Property="BorderColor" Value="#40FFFFFF"/>
+            <Setter Property="CornerRadius" Value="20"/>
+            <Setter Property="FontSize" Value="13"/>
+            <Setter Property="HeightRequest" Value="40"/>
+            <Setter Property="Padding" Value="15,0"/>
+            <Setter Property="BorderColor" Value="#25FFFFFF"/>
             <Setter Property="BorderWidth" Value="1"/>
+            <Setter Property="FontAttributes" Value="None"/>
         </Style>
     </ContentPage.Resources>
 
     <Grid>
-        <Image Source="background.jpg" Aspect="AspectFill" />
+        <Image Source="background.jpg" Aspect="AspectFill" Opacity="0.6" />
 
-        <Grid RowDefinitions="Auto, Auto, Auto, *, Auto" Margin="10,0,10,0">
+        <Grid RowDefinitions="Auto, Auto, Auto, *, Auto" Margin="15,0">
 
-            <Grid Grid.Row="0" ColumnDefinitions="50, *, 50" Padding="5,0,5,0">
-                <Image Grid.Column="1" Source="bros_logo_white.png" HeightRequest="90" HorizontalOptions="Center"/>
-            </Grid>
+            <Image Grid.Row="0" Source="bros_logo_white.png" 
+                   HeightRequest="70" 
+                   HorizontalOptions="Center" 
+                   Margin="0,40,0,10"/>
 
-            <Border Grid.Row="1" StrokeShape="RoundRectangle 25" Stroke="#30FFFFFF" 
-                    BackgroundColor="#15FFFFFF" HeightRequest="50" Margin="0,0,0,15">
-                <SearchBar x:Name="productSearchBar" Placeholder="Поиск..." 
-                           PlaceholderColor="#70FFFFFF" TextColor="White" 
-                           VerticalOptions="Center" TextChanged="OnSearchTextChanged" />
+            <Border Grid.Row="1" StrokeShape="RoundRectangle 15" 
+                    Stroke="#30FFFFFF" 
+                    BackgroundColor="#15FFFFFF" 
+                    HeightRequest="50" 
+                    Margin="0,10,0,15">
+                <Grid ColumnDefinitions="Auto, *">
+                    <Label Text="🔍" VerticalOptions="Center" Margin="15,0,0,0" Opacity="0.5"/>
+                    <SearchBar Grid.Column="1" x:Name="productSearchBar" 
+                               Placeholder="Найти кроссовки..." 
+                               PlaceholderColor="#60FFFFFF" 
+                               TextColor="White" 
+                               FontSize="14"
+                               VerticalOptions="Center" 
+                               SearchButtonPressed="OnSearchTextChanged" />
+                </Grid>
             </Border>
 
-            <ScrollView Grid.Row="2" Orientation="Horizontal" HorizontalScrollBarVisibility="Never" Margin="0,0,0,15">
-                <HorizontalStackLayout Spacing="8">
+            <ScrollView Grid.Row="2" Orientation="Horizontal" HorizontalScrollBarVisibility="Never" Margin="0,0,0,20">
+                <HorizontalStackLayout Spacing="10">
+                    <Button Text="Все" Clicked="OnAllFilterClicked" Style="{StaticResource FilterBtnStyle}" BackgroundColor="White" TextColor="Black"/>
                     <Button Text="Бренды" Clicked="OnBrandFilterClicked" Style="{StaticResource FilterBtnStyle}"/>
                     <Button Text="Типы" Clicked="OnTypeFilterClicked" Style="{StaticResource FilterBtnStyle}"/>
                     <Button Text="Цена ↑" Clicked="OnSortPriceAscClicked" Style="{StaticResource FilterBtnStyle}"/>
@@ -44,33 +58,67 @@
                 </HorizontalStackLayout>
             </ScrollView>
 
-            <CollectionView x:Name="ProductsCollection" Grid.Row="3" VerticalScrollBarVisibility="Never" Margin="0,0,0,10">
+            <CollectionView x:Name="ProductsCollection" Grid.Row="3" VerticalScrollBarVisibility="Never">
                 <CollectionView.ItemsLayout>
-                    <GridItemsLayout Orientation="Vertical" Span="2" HorizontalItemSpacing="12" VerticalItemSpacing="12"/>
+                    <GridItemsLayout Orientation="Vertical" Span="2" HorizontalItemSpacing="15" VerticalItemSpacing="15"/>
                 </CollectionView.ItemsLayout>
+
                 <CollectionView.ItemTemplate>
                     <DataTemplate x:DataType="models:Product">
-                        <Border StrokeShape="RoundRectangle 18" Stroke="Transparent" HeightRequest="250">
+                        <Border StrokeShape="RoundRectangle 18" 
+                                Stroke="Transparent" 
+                                HeightRequest="250"
+                                BackgroundColor="#1AFFFFFF">        
                             <Border.GestureRecognizers>
                                 <TapGestureRecognizer Tapped="OnProductTapped" CommandParameter="{Binding .}"/>
                             </Border.GestureRecognizers>
+
                             <Grid>
                                 <Image Source="{Binding ImageUrl}" Aspect="AspectFill" />
-                                <BoxView VerticalOptions="End" HeightRequest="100">
+
+                                <BoxView VerticalOptions="End" HeightRequest="120">
                                     <BoxView.Background>
                                         <LinearGradientBrush EndPoint="0,1">
-                                            <GradientStop Color="Transparent" Offset="0.1" />
-                                            <GradientStop Color="#CC000000" Offset="1.0" />
+                                            <GradientStop Color="Transparent" Offset="0.0" />
+                                            <GradientStop Color="#AA000000" Offset="0.6" />
+                                            <GradientStop Color="#EE000000" Offset="1.0" />
                                         </LinearGradientBrush>
                                     </BoxView.Background>
                                 </BoxView>
+
                                 <VerticalStackLayout VerticalOptions="End" Padding="12" Spacing="2">
-                                    <Label Text="{Binding Brand.Name}" TextColor="#BBFFFFFF" FontSize="10" FontAttributes="Bold" TextTransform="Uppercase"/>
-                                    <Label Text="{Binding Name}" TextColor="White" FontSize="14" FontAttributes="Bold" LineBreakMode="TailTruncation"/>
+                                    <Label Text="{Binding Brand.Name}" 
+                                           TextColor="#BBFFFFFF" 
+                                           FontSize="10" 
+                                           FontAttributes="Bold" 
+                                           TextTransform="Uppercase"
+                                           CharacterSpacing="1"/>       
+
+                                    <Label Text="{Binding Name}" 
+                                           TextColor="White" 
+                                           FontSize="14" 
+                                           FontAttributes="Bold" 
+                                           LineBreakMode="TailTruncation"/>
+
                                     <Grid ColumnDefinitions="*, Auto" Margin="0,4,0,0">
-                                        <Label Grid.Column="0" Text="{Binding Price, StringFormat='{0:N0} ₽'}" TextColor="White" FontSize="16" FontAttributes="Bold" VerticalOptions="Center"/>
-                                        <Border Grid.Column="1" StrokeShape="RoundRectangle 8" BackgroundColor="White" HeightRequest="28" WidthRequest="28">
-                                            <Label Text="+" TextColor="Black" HorizontalOptions="Center" VerticalOptions="Center" FontAttributes="Bold"/>
+                                        <Label Grid.Column="0" 
+                                               Text="{Binding Price, StringFormat='{0:N0} ₽'}" 
+                                               TextColor="White" 
+                                               FontSize="16" 
+                                               FontAttributes="Bold" 
+                                               VerticalOptions="Center"/>
+
+                                        <Border Grid.Column="1" 
+                                                StrokeShape="RoundRectangle 8" 
+                                                BackgroundColor="White" 
+                                                HeightRequest="30" 
+                                                WidthRequest="30">
+                                            <Label Text="+" 
+                                                   TextColor="Black" 
+                                                   HorizontalOptions="Center" 
+                                                   VerticalOptions="Center" 
+                                                   FontSize="18"
+                                                   FontAttributes="Bold"/>
                                         </Border>
                                     </Grid>
                                 </VerticalStackLayout>
@@ -81,28 +129,45 @@
             </CollectionView>
 
             <Border Grid.Row="4" 
-                    Margin="0,5,0,10" 
-                    HeightRequest="50"
+                    Margin="0,10,0,15" 
+                    HeightRequest="65"
                     StrokeShape="RoundRectangle 25"
-                    Stroke="#30FFFFFF"
-                    BackgroundColor="#1AFFFFFF">
+                    Stroke="#25FFFFFF"
+                    BackgroundColor="#15FFFFFF"
+                    Padding="10,0">
 
-                <Grid ColumnDefinitions="*, *, 1.2*, *, *">
-                    <ImageButton Grid.Column="0" Source="home_icon.png" Margin="12" WidthRequest="24"
-                                 BackgroundColor="Transparent" Clicked="OnHomeClicked"/>
-                    <ImageButton Grid.Column="1" Source="menu_icon.png" Margin="11" WidthRequest="24"
-                                 BackgroundColor="Transparent" Clicked="OnMenuClicked"/>
-                    <VerticalStackLayout Grid.Column="2" VerticalOptions="Center" Spacing="2">
-                        <Label x:Name="UserStatusLabel" TextColor="White" 
-                               FontSize="15" FontAttributes="Bold" HorizontalOptions="Center"/>
+                <Grid ColumnDefinitions="*, *, 1.5*, *, *">
+                    <ImageButton Grid.Column="0" Source="home_icon.png" Aspect="AspectFit" Margin="14"
+                                 BackgroundColor="Transparent" Clicked="OnHomeClicked" Opacity="1"/>
+
+                    <ImageButton Grid.Column="1" Source="menu_icon.png" Aspect="AspectFit" Margin="14"
+                                 BackgroundColor="Transparent" Clicked="OnMenuClicked" Opacity="0.5"/>
+
+                    <VerticalStackLayout Grid.Column="2" VerticalOptions="Center" HorizontalOptions="Center" Spacing="2">
+                        <Label x:Name="UserStatusLabel" 
+                               Text="ГОСТЬ" 
+                               TextColor="White" 
+                               FontSize="15" 
+                               FontAttributes="Bold" 
+                               CharacterSpacing="2"
+                               HorizontalOptions="Center"/>
+
+                        <BoxView HeightRequest="3" WidthRequest="3" 
+                                 CornerRadius="1.5" 
+                                 BackgroundColor="White" 
+                                 HorizontalOptions="Center" 
+                                 Opacity="0.8"/>
+
                         <VerticalStackLayout.GestureRecognizers>
                             <TapGestureRecognizer Tapped="OnProfileClicked"/>
                         </VerticalStackLayout.GestureRecognizers>
                     </VerticalStackLayout>
-                    <ImageButton Grid.Column="3" Source="cart_icon.png" Margin="10"
-                                 BackgroundColor="Transparent" Clicked="OnCartClicked"/>
-                    <ImageButton Grid.Column="4" Source="user_icon.png" Margin="8"
-                                 BackgroundColor="Transparent" Clicked="OnProfileClicked"/>
+
+                    <ImageButton Grid.Column="3" Source="cart_icon.png" Aspect="AspectFit" Margin="14"
+                                 BackgroundColor="Transparent" Clicked="OnCartClicked" Opacity="0.5"/>
+
+                    <ImageButton Grid.Column="4" Source="user_icon.png" Aspect="AspectFit" Margin="14"
+                                 BackgroundColor="Transparent" Clicked="OnProfileClicked" Opacity="0.5"/>
                 </Grid>
             </Border>
 

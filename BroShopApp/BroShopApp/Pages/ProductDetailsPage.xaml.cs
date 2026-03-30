@@ -11,6 +11,7 @@ public partial class ProductDetailsPage : ContentPage
     private Product _product;
     private readonly ApiService _apiService;
     private ProductVariant _selectedVariant;
+    public bool IsSizeVisible => Product?.ProductVariants != null && Product.ProductVariants.Count > 1;
 
     public Product Product
     {
@@ -19,16 +20,16 @@ public partial class ProductDetailsPage : ContentPage
         {
             _product = value;
             OnPropertyChanged();
+            OnPropertyChanged(nameof(IsSizeVisible));
             BindingContext = _product;
         }
     }
 
     public ProductDetailsPage()
-    {
-        // Теперь InitializeComponent() заработает, так как XAML корректен
-        InitializeComponent();
-        _apiService = new ApiService();
+    { 
+        InitializeComponent();    
         CheckAuthStatus();
+        _apiService = new ApiService();
     }
 
     protected override void OnAppearing()
@@ -54,7 +55,6 @@ public partial class ProductDetailsPage : ContentPage
         }
     }
 
-    // Кнопка "Войти" для гостей
     private async void OnLoginRedirectClicked(object sender, EventArgs e)
     {
         await Navigation.PushAsync(new LoginPage());
@@ -73,40 +73,57 @@ public partial class ProductDetailsPage : ContentPage
 
     private async void OnAddToCartClicked(object sender, EventArgs e)
     {
-        // 1. Проверяем, выбрал ли пользователь размер
-        if (_selectedVariant == null)
-        {
-            await DisplayAlert("Внимание", "Пожалуйста, выберите размер одежды", "ОК");
-            return;
-        }
-
-        // 2. Получаем ID пользователя (Предполагается, что он сохранен при входе)
         int userId = Preferences.Get("UserId", 0);
-
         if (userId == 0)
         {
-            await DisplayAlert("Ошибка", "Для добавления в корзину необходимо авторизоваться", "ОК");
+            await DisplayAlert("Ошибка", "Нужна авторизация", "ОК");
             return;
         }
 
-        // 3. Формируем DTO для отправки
+        // 2. Получаем список вариантов (например, список размеров)
+        var variants = Product?.ProductVariants?.ToList();
+        int targetVariantId = 0;
+
+        if (variants == null || !variants.Any())
+        {
+            await DisplayAlert("Ошибка", "Товара нет в наличии (нет вариантов в БД)", "ОК");
+            return;
+        }
+
+        // 3. Условие автоматического выбора
+        if (variants.Count == 1)
+        {
+            // Если вариант один (как у часов Casio), берем его молча
+            targetVariantId = variants[0].ProductVariantId;
+        }
+        else
+        {
+            // Если вариантов много (как у зипки Balenciaga), проверяем, выбрал ли пользователь что-то
+            if (_selectedVariant == null)
+            {
+                await DisplayAlert("Внимание", "Пожалуйста, выберите размер", "ОК");
+                return;
+            }
+            targetVariantId = _selectedVariant.ProductVariantId;
+        }
+
+        // 4. Отправка DTO на сервер
         var cartDto = new CartDTO
         {
             UserId = userId,
-            ProductVariantId = _selectedVariant.ProductVariantId,
-            Quantity = 1 // Добавляем по 1 штуке за клик
+            ProductVariantId = targetVariantId,
+            Quantity = 1
         };
 
-        // 4. Отправляем запрос
         bool isSuccess = await _apiService.AddToCartAsync(cartDto);
 
         if (isSuccess)
         {
-            await DisplayAlert("Успех", "Товар добавлен в корзину!", "Отлично");
+            await DisplayAlert("Успех", "Товар в корзине!", "Отлично");
         }
         else
         {
-            await DisplayAlert("Ошибка", "Не удалось добавить товар. Проверьте подключение.", "ОК");
+            await DisplayAlert("Ошибка", "Не удалось добавить. Проверьте сервер.", "ОК");
         }
     }
 

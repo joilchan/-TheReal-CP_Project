@@ -62,9 +62,9 @@ namespace BroShopApp
         }
 
         // Поиск по названию
-        private void OnSearchTextChanged(object sender, TextChangedEventArgs e)
+        private void OnSearchTextChanged(object sender, EventArgs e)
         {
-            var searchTerm = e.NewTextValue.ToLower();
+            var searchTerm = productSearchBar.Text?.ToLower() ?? "";
             ProductsCollection.ItemsSource = _allProducts
                 .Where(p => p.Name.ToLower().Contains(searchTerm))
                 .ToList();
@@ -199,9 +199,17 @@ namespace BroShopApp
 
         }
 
-        private void OnMenuClicked(object sender, EventArgs e)
+        private async void OnMenuClicked(object sender, EventArgs e)
         {
-
+            if (BroShopApp.Services.UserService.IsLoggedIn)
+            {
+                await Navigation.PushAsync(new MenuPage());
+            }
+            else
+            {
+                // Если не залогинен, лучше отправить на логин
+                await Navigation.PushAsync(new LoginPage());
+            }
         }
 
         private async void OnCartClicked(object sender, EventArgs e)
@@ -231,6 +239,12 @@ namespace BroShopApp
                     UserStatusLabel.Text = login;
                 }
             });
+        }
+
+        private void OnAllFilterClicked(object sender, EventArgs e)
+        {
+            ProductsCollection.ItemsSource = _allProducts
+                .ToList();
         }
     }
 }

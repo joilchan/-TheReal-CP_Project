@@ -161,5 +161,43 @@ namespace BroShopApp.Services
                 return false;
             }
         }
+
+        public async Task<bool> CreateOrderAsync(CreateOrderRequest request)
+        {
+            try
+            {
+                var response = await _httpClient.PostAsJsonAsync("orders", request);
+                return response.IsSuccessStatusCode;
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine($"Ошибка при оформлении заказа: {ex.Message}");
+                return false;
+            }
+        }
+
+        public async Task<List<Order>> GetUserOrdersAsync(int userId)
+        {
+            try
+            {
+                var options = new JsonSerializerOptions { PropertyNameCaseInsensitive = true };
+                var response = await _httpClient.GetStringAsync($"orders/user/{userId}");
+                return JsonSerializer.Deserialize<List<Order>>(response, options) ?? new List<Order>();
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine($"Ошибка получения заказов: {ex.Message}");
+                return new List<Order>();
+            }
+        }
+
+        public async Task<List<OrderDetail>> GetOrderDetailsAsync(int orderId)
+        {
+            try
+            {
+                return await _httpClient.GetFromJsonAsync<List<OrderDetail>>($"orders/details/{orderId}");
+            }
+            catch { return new List<OrderDetail>(); }
+        }
     }
 }

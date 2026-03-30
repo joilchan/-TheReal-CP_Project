@@ -7,76 +7,100 @@
              BackgroundColor="Black">
 
     <Grid>
-        <Image Source="background.jpg" Aspect="AspectFill" />
+        <Image Source="background.jpg" Aspect="AspectFill" Opacity="0.7" />
 
-        <VerticalStackLayout VerticalOptions="Center" Spacing="0" Padding="30">
+        <ScrollView VerticalOptions="Center">
+            <VerticalStackLayout Spacing="0" Padding="30">
 
-            <Image Source="bros_logo_white.png" HeightRequest="150" HorizontalOptions="Center" />
+                <Image Source="bros_logo_white.png" 
+                       HeightRequest="120" 
+                       HorizontalOptions="Center" 
+                       Margin="0,0,0,30"/>
 
-            <Border StrokeShape="RoundRectangle 25" 
-                    Stroke="#30FFFFFF" 
-                    BackgroundColor="#1AFFFFFF" 
-                    Padding="25,40">
+                <Border StrokeShape="RoundRectangle 25" 
+                        Stroke="#30FFFFFF" 
+                        BackgroundColor="#15FFFFFF" 
+                        Padding="25,40">
 
-                <VerticalStackLayout Spacing="20">
-                    <Label Text="ВХОД В АККАУНТ" 
-                           TextColor="White" 
-                           FontSize="20" 
-                           FontAttributes="Bold" 
-                           HorizontalOptions="Center" 
-                           Margin="0,0,0,10"/>
-
-                    <Border StrokeShape="RoundRectangle 15" Stroke="#40FFFFFF" BackgroundColor="#10FFFFFF" HeightRequest="55" Padding="15,0">
-                        <Entry x:Name="LoginEntry"
-                               Placeholder="Логин / Email" 
-                               PlaceholderColor="#70FFFFFF" 
+                    <VerticalStackLayout Spacing="20">
+                        <Label Text="ВХОД В АККАУНТ" 
                                TextColor="White" 
-                               VerticalOptions="Center"
-                               Keyboard="Email"/>
-                    </Border>
+                               FontSize="22" 
+                               FontAttributes="Bold" 
+                               HorizontalOptions="Center" 
+                               CharacterSpacing="2"
+                               Margin="0,0,0,10"/>
 
-                    <Border StrokeShape="RoundRectangle 15" Stroke="#40FFFFFF" BackgroundColor="#10FFFFFF" HeightRequest="55" Padding="15,0">
-                        <Entry x:Name="PasswordEntry"
-                               Placeholder="Пароль" 
-                               PlaceholderColor="#70FFFFFF" 
-                               TextColor="White" 
-                               IsPassword="True" 
-                               VerticalOptions="Center"/>
-                    </Border>
+                        <Border StrokeShape="RoundRectangle 15" 
+                                Stroke="#40FFFFFF" 
+                                BackgroundColor="#10FFFFFF" 
+                                HeightRequest="55" 
+                                Padding="15,0">
+                            <Entry x:Name="LoginEntry"
+                                   Placeholder="Логин / Email" 
+                                   PlaceholderColor="#60FFFFFF" 
+                                   TextColor="White" 
+                                   VerticalOptions="Center"
+                                   Keyboard="Email"
+                                   FontSize="15"/>
+                        </Border>
 
-                    <Button Text="ВОЙТИ" 
-                            BackgroundColor="White" 
-                            TextColor="Black" 
-                            FontAttributes="Bold" 
-                            CornerRadius="25" 
-                            HeightRequest="55" 
-                            Margin="0,10,0,0"
-                            Clicked="OnLoginSubmitClicked"/>
+                        <Border StrokeShape="RoundRectangle 15" 
+                                Stroke="#40FFFFFF" 
+                                BackgroundColor="#10FFFFFF" 
+                                HeightRequest="55" 
+                                Padding="15,0">
+                            <Entry x:Name="PasswordEntry"
+                                   Placeholder="Пароль" 
+                                   PlaceholderColor="#60FFFFFF" 
+                                   TextColor="White" 
+                                   IsPassword="True" 
+                                   VerticalOptions="Center"
+                                   FontSize="15"/>
+                        </Border>
 
-                    <Label Text="Забыли пароль?" 
-                           TextColor="#AAAAAA" 
-                           FontSize="12" 
-                           HorizontalOptions="Center" />
-                </VerticalStackLayout>
-            </Border>
-            
-            <HorizontalStackLayout Margin="15" HorizontalOptions="Center" Spacing="5">
-                <Label Text="Нет аккаунта?" TextColor="#88FFFFFF" />
-                <Label Text="Создать" TextColor="White" FontAttributes="Bold">
-                    <Label.GestureRecognizers>
-                        <TapGestureRecognizer Tapped="OnRegisterTapped" />
-                    </Label.GestureRecognizers>
-                </Label>
-            </HorizontalStackLayout>
+                        <Button Text="ВОЙТИ" 
+                                BackgroundColor="White" 
+                                TextColor="Black" 
+                                FontAttributes="Bold" 
+                                CornerRadius="15" 
+                                HeightRequest="55" 
+                                Margin="0,10,0,0"
+                                Clicked="OnLoginSubmitClicked"/>
 
-        </VerticalStackLayout>
+                        <Label Text="Забыли пароль?" 
+                               TextColor="#80FFFFFF" 
+                               FontSize="13" 
+                               HorizontalOptions="Center" 
+                               TextDecorations="Underline">
+                            <Label.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="OnForgotPasswordTapped"/>
+                            </Label.GestureRecognizers>
+                        </Label>
+                    </VerticalStackLayout>
+                </Border>
 
-        <ImageButton Source="back_icon.png" 
-                     HorizontalOptions="Start" 
-                     VerticalOptions="Start" 
-                     Margin="15, 30, 0, 0" 
-                     HeightRequest="1"
-                     WidthRequest="1"
-                     Clicked="OnBackClicked"/>
+                <HorizontalStackLayout Margin="0,25,0,0" HorizontalOptions="Center" Spacing="8">
+                    <Label Text="Нет аккаунта?" TextColor="#80FFFFFF" FontSize="15"/>
+                    <Label Text="Создать" TextColor="White" FontAttributes="Bold" FontSize="15">
+                        <Label.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="OnRegisterTapped" />
+                        </Label.GestureRecognizers>
+                    </Label>
+                </HorizontalStackLayout>
+
+            </VerticalStackLayout>
+        </ScrollView>
+
+        <Border StrokeShape="RoundRectangle 20" 
+                BackgroundColor="#30000000" 
+                HeightRequest="40" 
+                WidthRequest="40" 
+                HorizontalOptions="Start" 
+                VerticalOptions="Start" 
+                Margin="15,40" 
+                StrokeThickness="0">
+            <ImageButton Source="back_icon.png" Padding="10" Clicked="OnBackClicked" BackgroundColor="Transparent"/>
+        </Border>
     </Grid>
 </ContentPage>

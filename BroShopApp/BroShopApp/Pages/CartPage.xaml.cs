@@ -1,5 +1,6 @@
 using BroShopApp.Services;
 using BroShopApp.Model;
+using System.Collections.ObjectModel;
 
 namespace BroShopApp.Pages;
 
@@ -13,7 +14,6 @@ public partial class CartPage : ContentPage
         _apiService = new ApiService();
     }
 
-    // OnAppearing срабатывает каждый раз, когда страница появляется на экране
     protected override async void OnAppearing()
     {
         base.OnAppearing();
@@ -24,21 +24,22 @@ public partial class CartPage : ContentPage
     {
         try
         {
-            // 1. Берем сохраненный ID пользователя
             int userId = Preferences.Get("UserId", 0);
 
             if (userId == 0)
             {
-                // Если пользователь не вошел, можно обнулить список или отправить на логин
                 CartCollection.ItemsSource = null;
                 return;
             }
 
-            // 2. Загружаем данные из API
+            // Загружаем данные из API
             var items = await _apiService.GetCartAsync(userId);
 
-            // 3. Привязываем к списку
+            // Привязываем к списку
             CartCollection.ItemsSource = items;
+
+            // Обновляем итоговую сумму (только для выбранных)
+            UpdateTotalAmount();
         }
         catch (Exception ex)
         {
@@ -46,11 +47,30 @@ public partial class CartPage : ContentPage
         }
     }
 
+    // Метод для пересчета суммы на основе состояния IsSelected каждого товара
+    private void UpdateTotalAmount()
+    {
+        var items = CartCollection.ItemsSource as IEnumerable<CartItem>;
+        if (items == null) return;
+
+        decimal total = items
+            .Where(i => i.IsSelected)
+            .Sum(i => i.Quantity * i.Price);
+
+        TotalAmountLabel.Text = $"{total:N0} ₽";
+    }
+
+    // Обработчик изменения состояния CheckBox в XAML
+    private void OnIsSelectedChanged(object sender, CheckedChangedEventArgs e)
+    {
+        UpdateTotalAmount();
+    }
+
     private async void OnIncreaseQuantityClicked(object sender, EventArgs e)
     {
         var button = (Button)sender;
         var item = (CartItem)button.CommandParameter;
-        
+
         button.IsEnabled = false;
         item.Quantity++;
         await UpdateQuantityOnServer(item);
@@ -71,7 +91,6 @@ public partial class CartPage : ContentPage
         }
         else
         {
-            // Если уменьшаем с 1 до 0 — спрашиваем об удалении
             bool answer = await DisplayAlert("Удаление", "Удалить товар из корзины?", "Да", "Нет");
             if (answer)
             {
@@ -96,12 +115,57 @@ public partial class CartPage : ContentPage
 
         if (success)
         {
-            // Перезагружаем список, чтобы обновить UI
             await LoadCartItems();
         }
         else
         {
-            await DisplayAlert("Ошибка", "не удалось обновить корзину", "ОК");
+            await DisplayAlert("Ошибка", "Не удалось обновить корзину", "ОК");
         }
+    }
+
+    private async void OnCheckoutClicked(object sender, EventArgs e)
+    {
+        var allItems = CartCollection.ItemsSource as IEnumerable<CartItem>;
+
+        // Фильтруем только те товары, у которых стоит галочка
+        var selectedItems = allItems?.Where(i => i.IsSelected).ToList();
+
+        if (selectedItems == null || !selectedItems.Any())
+        {
+            await DisplayAlert("Корзина", "Выберите хотя бы один товар для оформления заказа", "ОК");
+            return;
+        }
+
+        string address = await DisplayPromptAsync("Оформление заказа", "Введите адрес доставки:", "ОК", "Отмена", "г. Москва, ул. Пушкина, д. 1");
+
+        if (string.IsNullOrWhiteSpace(address))
+            return;
+
+        int userId = Preferences.Get("UserId", 0);
+
+        // Формируем запрос, передавая список ID выбранных вариантов
+        var request = new CreateOrderRequest
+        {
+            UserId = userId,
+            Address = address,
+            SelectedVariantIds = selectedItems.Select(i => i.ProductVariantId).ToList()
+        };
+
+        bool success = await _apiService.CreateOrderAsync(request);
+
+        if (success)
+        {
+            await DisplayAlert("Успех", "Ваш заказ успешно оформлен!", "ОК");
+            await LoadCartItems();
+        }
+        else
+        {
+            await DisplayAlert("Ошибка", "Не удалось оформить заказ. Попробуйте позже.", "ОК");
+        }
+    }
+
+    private async void OnBackClicked(object sender, EventArgs e)
+    {
+        await Navigation.PopAsync();
     }
 }

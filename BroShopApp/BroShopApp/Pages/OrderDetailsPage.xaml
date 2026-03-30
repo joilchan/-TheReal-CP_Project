@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BroShopApp.Pages.OrderDetailsPage"
+             Title="OrderDetailsPage">
+
+    <Grid RowDefinitions="Auto, *, Auto" Padding="20">
+
+        <VerticalStackLayout Grid.Row="0" Spacing="5" Margin="0,10,0,20">
+            <HorizontalStackLayout HorizontalOptions="Center" Spacing="10">
+                <Label Text="ЗАКАЗ #" TextColor="Gray" FontSize="18" FontAttributes="Bold"/>
+                <Label Text="{Binding OrderId}" TextColor="White" FontSize="18" FontAttributes="Bold"/>
+            </HorizontalStackLayout>
+
+            <Border StrokeShape="RoundRectangle 15" BackgroundColor="#1AFFFFFF" Padding="15" Margin="0,10,0,0">
+                <VerticalStackLayout Spacing="8">
+                    <HorizontalStackLayout Spacing="10">
+                        <Label Text="Статус:" TextColor="#88FFFFFF" WidthRequest="70"/>
+                        <Label Text="{Binding Status}" TextColor="#A6FF00" FontAttributes="Bold"/>
+                    </HorizontalStackLayout>
+
+                    <HorizontalStackLayout Spacing="10">
+                        <Label Text="Дата:" TextColor="#88FFFFFF" WidthRequest="70"/>
+                        <Label Text="{Binding DisplayDate}" TextColor="White"/>
+                    </HorizontalStackLayout>
+
+                    <HorizontalStackLayout Spacing="10">
+                        <Label Text="Адрес:" TextColor="#88FFFFFF" WidthRequest="70"/>
+                        <Label Text="{Binding Address}" TextColor="White" LineBreakMode="WordWrap" WidthRequest="200"/>
+                    </HorizontalStackLayout>
+                </VerticalStackLayout>
+            </Border>
+        </VerticalStackLayout>
+
+        <CollectionView Grid.Row="1" x:Name="DetailsCollection">
+            <CollectionView.Header>
+                <Label Text="СОСТАВ ЗАКАЗА" TextColor="Gray" FontSize="12" Margin="0,0,0,10" CharacterSpacing="1"/>
+            </CollectionView.Header>
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <Border StrokeShape="RoundRectangle 12" BackgroundColor="#121212" Margin="0,0,0,10" Padding="10">
+                        <Grid ColumnDefinitions="60, *, Auto">
+                            <Border Grid.Column="0" StrokeShape="RoundRectangle 8" HeightRequest="60" WidthRequest="60">
+                                <Image Source="{Binding ImageUrl}" Aspect="AspectFill"/>
+                            </Border>
+
+                            <VerticalStackLayout Grid.Column="1" VerticalOptions="Center" Margin="12,0">
+                                <Label Text="{Binding ProductName}" TextColor="White" FontAttributes="Bold" FontSize="14"/>
+                                <Label Text="{Binding Size, StringFormat='Размер: {0}'}" TextColor="Gray" FontSize="12"/>
+                            </VerticalStackLayout>
+
+                            <VerticalStackLayout Grid.Column="2" VerticalOptions="Center" HorizontalOptions="End">
+                                <Label Text="{Binding DisplayPrice}" TextColor="White" FontAttributes="Bold" FontSize="14"/>
+                                <Label Text="{Binding Quantity, StringFormat='{0} шт.'}" TextColor="#88FFFFFF" FontSize="11" HorizontalOptions="End"/>
+                            </VerticalStackLayout>
+                        </Grid>
+                    </Border>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+
+        <VerticalStackLayout Grid.Row="2" Padding="0,20,0,10" Spacing="15">
+            <BoxView HeightRequest="1" Color="#33FFFFFF" Margin="0,0,0,5"/>
+
+            <HorizontalStackLayout HorizontalOptions="FillAndExpand">
+                <Label Text="Сумма товаров:" TextColor="Gray" />
+                <Label Text="{Binding Amount, StringFormat='{0:N0} ₽'}" TextColor="White" HorizontalOptions="EndAndExpand"/>
+            </HorizontalStackLayout>
+
+            <HorizontalStackLayout HorizontalOptions="FillAndExpand">
+                <Label Text="Доставка:" TextColor="Gray" />
+                <Label Text="{Binding DeliveryCost, StringFormat='{0:N0} ₽'}" TextColor="White" HorizontalOptions="EndAndExpand"/>
+            </HorizontalStackLayout>
+
+            <HorizontalStackLayout HorizontalOptions="FillAndExpand">
+                <Label Text="ИТОГО К ОПЛАТЕ:" TextColor="White" FontAttributes="Bold" FontSize="18"/>
+                <Label Text="{Binding DisplayTotal}" TextColor="#A6FF00" FontAttributes="Bold" FontSize="18" HorizontalOptions="EndAndExpand"/>
+            </HorizontalStackLayout>
+
+            <Button Text="ВЕРНУТЬСЯ" 
+                    Clicked="OnCloseClicked" 
+                    BackgroundColor="White" 
+                    TextColor="Black" 
+                    CornerRadius="25" 
+                    HeightRequest="50" 
+                    FontAttributes="Bold" 
+                    Margin="0,10,0,0"/>
+        </VerticalStackLayout>
+    </Grid>
+</ContentPage>

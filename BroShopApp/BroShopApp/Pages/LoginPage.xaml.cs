@@ -59,4 +59,9 @@ public partial class LoginPage : ContentPage
     {
         await Navigation.PopAsync();
     }
+
+    private void OnForgotPasswordTapped(object sender, TappedEventArgs e)
+    {
+
+    }
 }

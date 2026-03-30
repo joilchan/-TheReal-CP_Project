@@ -22,8 +22,8 @@ namespace BroShopAPI.Controllers
                 {
                     c.ProductVariantId,
                     c.Quantity,
-                    Size = c.ProductVariant.Size,
-                    ProductName = c.ProductVariant.Product.Name,
+                    Size = c.ProductVariant != null ? c.ProductVariant.Size : "Универсальный",
+                    ProductName = c.ProductVariant != null ? c.ProductVariant.Product.Name : "Товар",
                     Price = c.ProductVariant.Product.Price,
                     Image = c.ProductVariant.Product.ImageUrl
                 }).ToListAsync();

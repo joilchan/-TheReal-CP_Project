@@ -3,68 +3,106 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="BroShopApp.Pages.CartPage"
              BackgroundColor="Black"
+             NavigationPage.HasNavigationBar="False"
              Shell.NavBarIsVisible="False">
 
-    <Grid RowDefinitions="Auto, *, Auto">
-        <Label Grid.Row="0" Text="КОРЗИНА" TextColor="White" 
-               HorizontalOptions="Center" Margin="0,50,0,20" 
-               FontAttributes="Bold" FontSize="22" CharacterSpacing="2"/>
+    <Grid>
+        <Image Source="background.jpg" Aspect="AspectFill" Opacity="0.7" />
 
-        <CollectionView Grid.Row="1" x:Name="CartCollection" Margin="20,0">
-            <CollectionView.EmptyView>
-                <VerticalStackLayout VerticalOptions="Center" HorizontalOptions="Center" Spacing="10">
-                    <Label Text="🛒" FontSize="50" HorizontalOptions="Center"/>
-                    <Label Text="Ваша корзина пуста" TextColor="Gray" HorizontalOptions="Center"/>
+        <Grid RowDefinitions="Auto, *, Auto">
+
+            <Grid Grid.Row="0" ColumnDefinitions="Auto, *, Auto" Padding="15, 40, 15, 10">
+                <Border StrokeShape="RoundRectangle 20" 
+                        BackgroundColor="#30000000" 
+                        HeightRequest="40" 
+                        WidthRequest="40" 
+                        StrokeThickness="0">
+                    <ImageButton Source="back_icon.png" Padding="10" Clicked="OnBackClicked" BackgroundColor="Transparent"/>
+                </Border>
+
+                <Label Grid.Column="1" Text="КОРЗИНА" TextColor="White" 
+                       HorizontalOptions="Center" VerticalOptions="Center"
+                       FontAttributes="Bold" FontSize="20" CharacterSpacing="2" Margin="0, 10, 40, 0"/>
+            </Grid>
+
+            <CollectionView Grid.Row="1" x:Name="CartCollection" Margin="15,0" VerticalScrollBarVisibility="Never">
+                <CollectionView.EmptyView>
+                    <VerticalStackLayout VerticalOptions="Center" HorizontalOptions="Center" Spacing="15" Margin="0,100,0,0">
+                        <Image Source="cart_icon.png" HorizontalOptions="Center" Opacity="0.5" Margin="150, 20, 150, 10"/>
+                        <Label Text="Ваша корзина пока пуста" TextColor="#80FFFFFF" FontSize="16" HorizontalOptions="Center"/>
+                    </VerticalStackLayout>
+                </CollectionView.EmptyView>
+
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Border StrokeShape="RoundRectangle 18" 
+                                Stroke="#25FFFFFF" 
+                                BackgroundColor="#15FFFFFF" 
+                                Margin="0,0,0,12" 
+                                Padding="12">
+                            <Grid ColumnDefinitions="35, 80, *, Auto" ColumnSpacing="12">
+
+                                <CheckBox Grid.Column="0" 
+                                          IsChecked="{Binding IsSelected}" 
+                                          Color="White" 
+                                          VerticalOptions="Center"
+                                          CheckedChanged="OnIsSelectedChanged"/>
+
+                                <Border Grid.Column="1" StrokeShape="RoundRectangle 12" StrokeThickness="0"
+                                        HeightRequest="80" WidthRequest="80">
+                                    <Image Source="{Binding Image}" Aspect="AspectFill"/>
+                                </Border>
+
+                                <VerticalStackLayout Grid.Column="2" VerticalOptions="Center">
+                                    <Label Text="{Binding ProductName}" TextColor="White" FontSize="15" FontAttributes="Bold" MaxLines="2"/>
+                                    <Label Text="{Binding Size, StringFormat='Размер: {0}'}" TextColor="#80FFFFFF" FontSize="12" Margin="0,2,0,0"/>
+                                    <Label Text="{Binding Price, StringFormat='{0:N0} ₽'}" TextColor="White" FontSize="16" FontAttributes="Bold" Margin="0,6,0,0"/>
+                                </VerticalStackLayout>
+
+                                <VerticalStackLayout Grid.Column="3" VerticalOptions="Center" Spacing="8">
+                                    <Border StrokeShape="RoundRectangle 15" BackgroundColor="#20FFFFFF" Stroke="#20FFFFFF" Padding="2">
+                                        <HorizontalStackLayout Spacing="5" VerticalOptions="Center">
+                                            <Button Text="−" 
+                                                    Clicked="OnDecreaseQuantityClicked"
+                                                    CommandParameter="{Binding .}"
+                                                    WidthRequest="30" HeightRequest="30" CornerRadius="15"
+                                                    BackgroundColor="Transparent" TextColor="White" FontSize="18" Padding="0"/>
+
+                                            <Label Text="{Binding Quantity}" 
+                                                   TextColor="White" VerticalOptions="Center" 
+                                                   FontSize="14" FontAttributes="Bold"
+                                                   WidthRequest="20" HorizontalTextAlignment="Center"/>
+
+                                            <Button Text="+" 
+                                                    Clicked="OnIncreaseQuantityClicked"
+                                                    CommandParameter="{Binding .}"
+                                                    WidthRequest="30" HeightRequest="30" CornerRadius="15"
+                                                    BackgroundColor="Transparent" TextColor="White" FontSize="18" Padding="0"/>
+                                        </HorizontalStackLayout>
+                                    </Border>
+                                </VerticalStackLayout>
+                            </Grid>
+                        </Border>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+
+            <Border Grid.Row="2" StrokeShape="RoundRectangle 30,30,0,0" 
+                    Stroke="#30FFFFFF" BackgroundColor="#20FFFFFF" Padding="25,20">
+                <VerticalStackLayout Spacing="20">
+                    <Grid ColumnDefinitions="*, Auto">
+                        <Label Text="ИТОГО К ОПЛАТЕ" TextColor="#80FFFFFF" FontSize="12" CharacterSpacing="1" VerticalOptions="Center"/>
+                        <Label Grid.Column="1" x:Name="TotalAmountLabel" Text="0 ₽" 
+                               TextColor="White" FontSize="22" FontAttributes="Bold"/>
+                    </Grid>
+
+                    <Button Text="ОФОРМИТЬ ЗАКАЗ" 
+                            BackgroundColor="White" TextColor="Black" 
+                            CornerRadius="15" HeightRequest="55" 
+                            FontAttributes="Bold" FontSize="16"
+                            Clicked="OnCheckoutClicked"/>
                 </VerticalStackLayout>
-            </CollectionView.EmptyView>
-
-            <CollectionView.ItemTemplate>
-                <DataTemplate>
-                    <Border StrokeShape="RoundRectangle 15" Stroke="Transparent" 
-                            BackgroundColor="#1A1A1A" Margin="0,0,0,12" Padding="10">
-                        <Grid ColumnDefinitions="90, *, Auto">
-                            <Border Grid.Column="0" StrokeShape="RoundRectangle 10" HeightRequest="90" WidthRequest="90">
-                                <Image Source="{Binding Image}" Aspect="AspectFill"/>
-                            </Border>
-
-                            <VerticalStackLayout Grid.Column="1" VerticalOptions="Center" Margin="15,0">
-                                <Label Text="{Binding ProductName}" TextColor="White" FontSize="16" FontAttributes="Bold"/>
-                                <Label Text="{Binding Size, StringFormat='Размер: {0}'}" TextColor="#88FFFFFF" FontSize="13"/>
-                                <Label Text="{Binding Price, StringFormat='{0:N0} ₽'}" TextColor="White" FontSize="16" Margin="0,5,0,0"/>
-                            </VerticalStackLayout>
-
-                            <HorizontalStackLayout Grid.Column="2" VerticalOptions="Center" Spacing="10">
-                                <Button Text="-" 
-                                        Clicked="OnDecreaseQuantityClicked"
-                                        CommandParameter="{Binding .}"
-                                        WidthRequest="35" HeightRequest="35" CornerRadius="17" Padding="0"
-                                        BackgroundColor="#333333" TextColor="White"/>
-
-                                <Label Text="{Binding Quantity}" 
-                                       TextColor="White" VerticalOptions="Center" 
-                                       WidthRequest="20" HorizontalTextAlignment="Center"/>
-
-                                <Button Text="+" 
-                                        Clicked="OnIncreaseQuantityClicked"
-                                        CommandParameter="{Binding .}"
-                                        WidthRequest="35" HeightRequest="35" CornerRadius="17" Padding="0"
-                                        BackgroundColor="#333333" TextColor="White"/>
-                            </HorizontalStackLayout>
-                        </Grid>
-                    </Border>
-                </DataTemplate>
-            </CollectionView.ItemTemplate>
-        </CollectionView>
-
-        <VerticalStackLayout Grid.Row="2" BackgroundColor="#1A1A1A" Padding="25">
-            <HorizontalStackLayout HorizontalOptions="Fill" Margin="0,0,0,15">
-                <Label Text="ИТОГО:" TextColor="Gray" VerticalOptions="Center" FontAttributes="Bold"/>
-            </HorizontalStackLayout>
-
-            <Button Text="ОФОРМИТЬ ЗАКАЗ" 
-                    BackgroundColor="White" TextColor="Black" 
-                    CornerRadius="28" HeightRequest="56" 
-                    FontAttributes="Bold"/>
-        </VerticalStackLayout>
+            </Border>
+        </Grid>
     </Grid>
 </ContentPage>

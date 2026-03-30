@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BroShopApp.Pages.MenuPage"
+             BackgroundColor="Black"
+             Shell.NavBarIsVisible="False">
+
+    <Grid>
+        <Image Source="background.jpg" Aspect="AspectFill" Opacity="0.6"/>
+
+        <ScrollView>
+            <VerticalStackLayout Padding="20" Spacing="15" Margin="0, 25">
+
+                <Label Text="НАСТРОЙКИ И УПРАВЛЕНИЕ" 
+                       TextColor="#80FFFFFF" 
+                       FontSize="12" 
+                       CharacterSpacing="2"
+                       Margin="5,10,0,5"/>
+
+                <Border StrokeShape="RoundRectangle 15" BackgroundColor="#15FFFFFF" Stroke="#30FFFFFF">
+                    <VerticalStackLayout>
+                        <Grid ColumnDefinitions="40, *, Auto" Padding="15" x:Name="ProfileRow">
+                            <Image Source="user_icon.png" WidthRequest="22" HorizontalOptions="Start"/>
+                            <Label Grid.Column="1" Text="Профиль" TextColor="White" VerticalOptions="Center" FontSize="16"/>
+                            <Image Grid.Column="2" Source="arrow_right.png" WidthRequest="15" Opacity="0.5"/>
+                            <Grid.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="OnProfileClicked"/>
+                            </Grid.GestureRecognizers>
+                        </Grid>
+
+                        <BoxView HeightRequest="1" BackgroundColor="#20FFFFFF" Margin="15,0"/>
+
+                        <Grid ColumnDefinitions="40, *, Auto" Padding="15">
+                            <Image Source="cart_icon.png" WidthRequest="22" HorizontalOptions="Start"/>
+                            <Label Grid.Column="1" Text="Корзина" TextColor="White" VerticalOptions="Center" FontSize="16"/>
+                            <Image Grid.Column="2" Source="arrow_right.png" WidthRequest="15" Opacity="0.5"/>
+                            <Grid.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="OnCartClicked"/>
+                            </Grid.GestureRecognizers>
+                        </Grid>
+                    </VerticalStackLayout>
+                </Border>
+
+                <Border StrokeShape="RoundRectangle 15" BackgroundColor="#15FFFFFF" Stroke="#30FFFFFF">
+                    <VerticalStackLayout>
+                        <Grid ColumnDefinitions="40, *, Auto" Padding="15">
+                            <Image Source="key_icon.png" WidthRequest="22" HorizontalOptions="Start"/>
+                            <Label Grid.Column="1" Text="Пароль и безопасность" TextColor="White" VerticalOptions="Center" FontSize="16"/>
+                            <Image Grid.Column="2" Source="arrow_right.png" WidthRequest="15" Opacity="0.5"/>
+                            <Grid.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="OnSecurityClicked"/>
+                            </Grid.GestureRecognizers>
+                        </Grid>
+
+                        <BoxView HeightRequest="1" BackgroundColor="#20FFFFFF" Margin="15,0"/>
+
+                        <Grid ColumnDefinitions="40, *, Auto" Padding="15">
+                            <Image Source="settings_icon.png" WidthRequest="22" HorizontalOptions="Start"/>
+                            <Label Grid.Column="1" Text="Настройки приложения" TextColor="White" VerticalOptions="Center" FontSize="16"/>
+                            <Image Grid.Column="2" Source="arrow_right.png" WidthRequest="15" Opacity="0.5"/>
+                            <Grid.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="OnSettingsClicked"/>
+                            </Grid.GestureRecognizers>
+                        </Grid>
+                    </VerticalStackLayout>
+                </Border>
+
+                <VerticalStackLayout x:Name="AdminSection" IsVisible="False" Spacing="15">
+                    <Label Text="ПАНЕЛЬ АДМИНИСТРАТОРА" 
+                           TextColor="#FF4444" 
+                           FontSize="12" 
+                           CharacterSpacing="2"
+                           Margin="5,15,0,5"/>
+
+                    <Border StrokeShape="RoundRectangle 15" BackgroundColor="#20FF4444" Stroke="#40FF4444">
+                        <VerticalStackLayout>
+                            <Grid ColumnDefinitions="40, *, Auto" Padding="15">
+                                <Image Source="admin_icon.png" WidthRequest="22" HorizontalOptions="Start"/>
+                                <Label Grid.Column="1" Text="Управление заказами" TextColor="White" VerticalOptions="Center" FontSize="16"/>
+                                <Image Grid.Column="2" Source="arrow_right.png" WidthRequest="15" Opacity="0.5"/>
+                                <Grid.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="OnManageOrdersClicked"/>
+                                </Grid.GestureRecognizers>
+                            </Grid>
+
+                            <BoxView HeightRequest="1" BackgroundColor="#20FFFFFF" Margin="15,0"/>
+
+                            <Grid ColumnDefinitions="40, *, Auto" Padding="15">
+                                <Image Source="accounting_icon.png" WidthRequest="22" HorizontalOptions="Start"/>
+                                <Label Grid.Column="1" Text="Учет и статистика" TextColor="White" VerticalOptions="Center" FontSize="16"/>
+                                <Image Grid.Column="2" Source="arrow_right.png" WidthRequest="15" Opacity="0.5"/>
+                                <Grid.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="OnAccountingClicked"/>
+                                </Grid.GestureRecognizers>
+                            </Grid>
+                        </VerticalStackLayout>
+                    </Border>
+                </VerticalStackLayout>
+
+                <Button Text="Выйти из аккаунта" 
+                        TextColor="#FF4444" 
+                        BackgroundColor="Transparent" 
+                        BorderColor="#30FF4444" 
+                        BorderWidth="1"
+                        Margin="0,20,0,40"
+                        Clicked="OnLogoutClicked"/>
+            </VerticalStackLayout>
+        </ScrollView>
+        <Border StrokeShape="RoundRectangle 20" 
+                BackgroundColor="#30000000" 
+                HeightRequest="40" 
+                WidthRequest="40" 
+                HorizontalOptions="Start" 
+                VerticalOptions="Start" 
+                Margin="10,10" 
+                StrokeThickness="0">
+            <ImageButton Source="back_icon.png" Padding="10" Clicked="OnBackClicked"  BackgroundColor="Transparent"/>
+        </Border>
+    </Grid>
+</ContentPage>
