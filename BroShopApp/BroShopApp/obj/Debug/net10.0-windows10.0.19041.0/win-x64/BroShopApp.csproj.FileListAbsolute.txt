@@ -564,3 +564,9 @@ C:\Users\joil\Desktop\(TheReal)CP_Project\BroShopApp\BroShopApp\bin\Debug\net10.
 C:\Users\joil\Desktop\(TheReal)CP_Project\BroShopApp\BroShopApp\bin\Debug\net10.0-windows10.0.19041.0\win-x64\admin_icon.scale-100.png
 C:\Users\joil\Desktop\(TheReal)CP_Project\BroShopApp\BroShopApp\bin\Debug\net10.0-windows10.0.19041.0\win-x64\key_icon.scale-100.png
 C:\Users\joil\Desktop\(TheReal)CP_Project\BroShopApp\BroShopApp\bin\Debug\net10.0-windows10.0.19041.0\win-x64\settings_icon.scale-100.png
+C:\Users\joil\Desktop\(TheReal)CP_Project\BroShopApp\BroShopApp\bin\Debug\net10.0-windows10.0.19041.0\win-x64\close_icon.scale-100.png
+C:\Users\joil\Desktop\(TheReal)CP_Project\BroShopApp\BroShopApp\obj\Debug\net10.0-windows10.0.19041.0\win-x64\resizetizer\r\close_icon.scale-100.png
+C:\Users\joil\Desktop\(TheReal)CP_Project\BroShopApp\BroShopApp\bin\Debug\net10.0-windows10.0.19041.0\win-x64\Microsoft.Maui.Controls.HotReload.Forms.dll
+C:\Users\joil\Desktop\(TheReal)CP_Project\BroShopApp\BroShopApp\bin\Debug\net10.0-windows10.0.19041.0\win-x64\Microsoft.VisualStudio.DesignTools.MobileTapContracts.dll
+C:\Users\joil\Desktop\(TheReal)CP_Project\BroShopApp\BroShopApp\bin\Debug\net10.0-windows10.0.19041.0\win-x64\Microsoft.VisualStudio.DesignTools.TapContract.dll
+C:\Users\joil\Desktop\(TheReal)CP_Project\BroShopApp\BroShopApp\bin\Debug\net10.0-windows10.0.19041.0\win-x64\Microsoft.VisualStudio.DesignTools.XamlTapContract.dll

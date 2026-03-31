@@ -96,6 +96,42 @@ namespace BroShopAPI.Controllers
             return Ok(details);
         }
 
+        // GET: api/Orders/all
+        [HttpGet("all")]
+        public async Task<ActionResult<IEnumerable<object>>> GetAllOrders()
+        {
+            // Получаем все заказы и джоиним с Users, чтобы вытащить имя заказчика
+            var orders = await (from o in _context.Orders
+                                join u in _context.Users on o.UserId equals u.UserId
+                                orderby o.OrderDate descending
+                                select new
+                                {
+                                    o.OrderId,
+                                    o.UserId,
+                                    UserName = string.IsNullOrEmpty(u.FullName) ? u.Login : u.FullName,
+                                    o.Address,
+                                    o.OrderDate,
+                                    o.Amount,
+                                    o.DeliveryCost,
+                                    o.Status
+                                }).ToListAsync();
 
+            return Ok(orders);
+        }
+
+
+        // PUT: api/Orders/status/5
+        [HttpPut("status/{orderId}")]
+        public async Task<IActionResult> UpdateOrderStatus(int orderId, [FromBody] UpdateStatusDto dto)
+        {
+            var order = await _context.Orders.FindAsync(orderId);
+            if (order == null)
+                return NotFound("Заказ не найден");
+
+            order.Status = dto.Status;
+            await _context.SaveChangesAsync();
+
+            return Ok();
+        }
     }
 }

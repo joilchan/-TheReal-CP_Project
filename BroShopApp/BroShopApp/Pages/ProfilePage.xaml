@@ -5,7 +5,10 @@
              x:Class="BroShopApp.Pages.ProfilePage"
              NavigationPage.HasNavigationBar="False"
              Shell.NavBarIsVisible="False"
-             BackgroundColor="Black">
+             xmlns:converters="clr-namespace:BroShopApp.Converters">
+    <ContentPage.Resources>
+        <converters:StatusToColorConverter x:Key="StatusToColor" />
+    </ContentPage.Resources>
 
     <Grid>
         <Image Source="background.jpg" Aspect="AspectFill" Opacity="0.7" />
@@ -75,35 +78,57 @@
                     </CollectionView.ItemsLayout>
 
                     <CollectionView.ItemTemplate>
-                        <DataTemplate>
+                        <DataTemplate x:DataType="models:Order">
                             <Border StrokeShape="RoundRectangle 18" 
                                     Stroke="#20FFFFFF" 
                                     BackgroundColor="#10FFFFFF" 
-                                    Padding="15">
-                                <Grid RowDefinitions="Auto, Auto" ColumnDefinitions="*, Auto">
+                                    Padding="15" 
+                                    Margin="0,0,0,10">
+                                <Grid RowDefinitions="Auto, Auto" ColumnDefinitions="*, Auto, Auto">
+
                                     <VerticalStackLayout Grid.Row="0" Grid.Column="0" Spacing="2">
                                         <Label Text="{Binding DisplayDate}" TextColor="#60FFFFFF" FontSize="11"/>
                                         <Label Text="{Binding Address}" TextColor="White" FontSize="14" FontAttributes="Bold" LineBreakMode="TailTruncation"/>
                                     </VerticalStackLayout>
 
-                                    <Border Grid.Row="0" Grid.Column="1" 
-                                            StrokeShape="RoundRectangle 8" 
-                                            BackgroundColor="#20A6FF00" 
-                                            Padding="8,4" 
-                                            VerticalOptions="Start">
-                                        <Label Text="{Binding Status}" TextColor="#A6FF00" FontSize="10" FontAttributes="Bold"/>
-                                    </Border>
+                                    <VerticalStackLayout Grid.Row="0" Grid.Column="1">
+                                        <ImageButton
+                                                 Margin="45, 0, 0, 0"
+                                                 Source="close_icon.png" 
+                                                 HeightRequest="20" 
+                                                 WidthRequest="20"
+                                                 Padding="2"
+                                                 BackgroundColor="Transparent"
+                                                 VerticalOptions="Start"
+                                                 IsVisible="{Binding Status, Converter={StaticResource StatusToCancelVisible}}"
+                                                 Clicked="OnCancelOrderClicked"
+                                                 CommandParameter="{Binding .}">
+                                        </ImageButton>
+                                    </VerticalStackLayout>
+                                    
 
-                                    <Label Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" 
+                                    <Label Grid.Row="1"
                                            Text="{Binding DisplayTotal}" 
                                            TextColor="White" 
                                            FontSize="18" 
                                            FontAttributes="Bold" 
                                            Margin="0,12,0,0"/>
+
+                                    <Border Grid.Row="1" Grid.Column="1"
+                                            StrokeShape="RoundRectangle 8" 
+                                            BackgroundColor="{Binding Status, Converter={StaticResource StatusToColor}, ConverterParameter='BG'}" 
+                                            Padding="8,4" 
+                                            VerticalOptions="Start"
+                                            HorizontalOptions="End"
+                                            Margin="0, 10, 0, 0">
+                                        <Label Text="{Binding Status}" 
+                                                   TextColor="{Binding Status, Converter={StaticResource StatusToColor}}" 
+                                                   FontSize="10" FontAttributes="Bold"/>
+                                    </Border>
                                 </Grid>
                             </Border>
                         </DataTemplate>
-                    </CollectionView.ItemTemplate>
+                        </CollectionView.ItemTemplate>
                 </CollectionView>
 
                 <Button Text="ВЫЙТИ ИЗ АККАУНТА" 

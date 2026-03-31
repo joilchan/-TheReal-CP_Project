@@ -24,20 +24,19 @@
     <Grid>
         <Image Source="background.jpg" Aspect="AspectFill" Opacity="0.6" />
 
-        <Grid RowDefinitions="Auto, Auto, Auto, *, Auto" Margin="15,0">
+        <Grid RowDefinitions="Auto, Auto, Auto, *, Auto" Margin="7,0">
 
             <Image Grid.Row="0" Source="bros_logo_white.png" 
                    HeightRequest="70" 
                    HorizontalOptions="Center" 
-                   Margin="0,40,0,10"/>
+                   Margin="0,0,0,0"/>
 
             <Border Grid.Row="1" StrokeShape="RoundRectangle 15" 
                     Stroke="#30FFFFFF" 
                     BackgroundColor="#15FFFFFF" 
                     HeightRequest="50" 
-                    Margin="0,10,0,15">
+                    Margin="0,5,0,15">
                 <Grid ColumnDefinitions="Auto, *">
-                    <Label Text="🔍" VerticalOptions="Center" Margin="15,0,0,0" Opacity="0.5"/>
                     <SearchBar Grid.Column="1" x:Name="productSearchBar" 
                                Placeholder="Найти кроссовки..." 
                                PlaceholderColor="#60FFFFFF" 
@@ -129,7 +128,7 @@
             </CollectionView>
 
             <Border Grid.Row="4" 
-                    Margin="0,10,0,15" 
+                    Margin="0,5,0,10" 
                     HeightRequest="65"
                     StrokeShape="RoundRectangle 25"
                     Stroke="#25FFFFFF"

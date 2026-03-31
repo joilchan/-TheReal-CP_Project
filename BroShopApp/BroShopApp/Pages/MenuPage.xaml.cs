@@ -42,7 +42,7 @@ public partial class MenuPage : ContentPage
 
     // Методы админа
     private async void OnManageOrdersClicked(object sender, EventArgs e) =>
-        await DisplayAlert("Админ", "Переход к управлению заказами", "OK");
+        await Navigation.PushAsync(new AdminOrdersPage());
 
     private async void OnAccountingClicked(object sender, EventArgs e) =>
         await DisplayAlert("Админ", "Переход к учету и статистике", "OK");

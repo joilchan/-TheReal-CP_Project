@@ -95,6 +95,26 @@
   },
   {
     "ContainingType": "BroShopAPI.Controllers.OrdersController",
+    "Method": "GetAllOrders",
+    "RelativePath": "api/Orders/all",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "BroShopAPI.Controllers.OrdersController",
     "Method": "GetOrderDetails",
     "RelativePath": "api/Orders/details/{orderId}",
     "HttpMethod": "GET",
@@ -118,6 +138,27 @@
         "StatusCode": 200
       }
     ]
+  },
+  {
+    "ContainingType": "BroShopAPI.Controllers.OrdersController",
+    "Method": "UpdateOrderStatus",
+    "RelativePath": "api/Orders/status/{orderId}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "orderId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "dto",
+        "Type": "BroShopAPI.Models.UpdateStatusDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
   },
   {
     "ContainingType": "BroShopAPI.Controllers.OrdersController",

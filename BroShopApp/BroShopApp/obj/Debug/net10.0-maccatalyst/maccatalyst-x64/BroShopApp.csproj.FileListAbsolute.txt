@@ -318,3 +318,8 @@ C:\Users\joil\Desktop\(TheReal)CP_Project\BroShopApp\BroShopApp\obj\Debug\net10.
 C:\Users\joil\Desktop\(TheReal)CP_Project\BroShopApp\BroShopApp\obj\Debug\net10.0-maccatalyst\maccatalyst-x64\resizetizer\r\Resources\admin_icon.png
 C:\Users\joil\Desktop\(TheReal)CP_Project\BroShopApp\BroShopApp\obj\Debug\net10.0-maccatalyst\maccatalyst-x64\resizetizer\r\Resources\settings_icon.png
 C:\Users\joil\Desktop\(TheReal)CP_Project\BroShopApp\BroShopApp\obj\Debug\net10.0-maccatalyst\maccatalyst-x64\resizetizer\r\Resources\accounting_icon.png
+C:\Users\joil\Desktop\(TheReal)CP_Project\BroShopApp\BroShopApp\bin\Debug\net10.0-maccatalyst\maccatalyst-x64\Microsoft.Maui.Controls.HotReload.Forms.dll
+C:\Users\joil\Desktop\(TheReal)CP_Project\BroShopApp\BroShopApp\bin\Debug\net10.0-maccatalyst\maccatalyst-x64\Microsoft.VisualStudio.DesignTools.MobileTapContracts.dll
+C:\Users\joil\Desktop\(TheReal)CP_Project\BroShopApp\BroShopApp\bin\Debug\net10.0-maccatalyst\maccatalyst-x64\Microsoft.VisualStudio.DesignTools.TapContract.dll
+C:\Users\joil\Desktop\(TheReal)CP_Project\BroShopApp\BroShopApp\bin\Debug\net10.0-maccatalyst\maccatalyst-x64\Microsoft.VisualStudio.DesignTools.XamlTapContract.dll
+C:\Users\joil\Desktop\(TheReal)CP_Project\BroShopApp\BroShopApp\obj\Debug\net10.0-maccatalyst\maccatalyst-x64\resizetizer\r\Resources\close_icon.png

@@ -61,4 +61,31 @@ public partial class ProfilePage : ContentPage
             await Navigation.PushModalAsync(new OrderDetailsPage(selectedOrder));
         }
     }
+
+    private async void OnCancelOrderClicked(object sender, EventArgs e)
+    {
+        var button = sender as ImageButton;
+        var order = button?.CommandParameter as Order;
+
+        if (order == null) return;
+
+        // Подтверждение важно, так как крестик нажать легче, чем большую кнопку
+        bool confirm = await DisplayAlert("Отмена", $"Отменить заказ #{order.OrderId}?", "Да", "Нет");
+
+        if (confirm)
+        {
+            var success = await _apiService.UpdateOrderStatusAsync(order.OrderId, "Отменен");
+
+            if (success)
+            {
+                // Обновляем статус в локальном объекте (если есть INotifyPropertyChanged)
+                // или просто обновляем список
+                await LoadOrders();
+            }
+            else
+            {
+                await DisplayAlert("Ошибка", "Не удалось отменить заказ", "OK");
+            }
+        }
+    }
 }

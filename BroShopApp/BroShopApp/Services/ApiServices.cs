@@ -199,5 +199,34 @@ namespace BroShopApp.Services
             }
             catch { return new List<OrderDetail>(); }
         }
+
+        public async Task<List<Order>> GetAllOrdersAsync()
+        {
+            try
+            {
+                var options = new JsonSerializerOptions { PropertyNameCaseInsensitive = true };
+                var response = await _httpClient.GetStringAsync("orders/all");
+                return JsonSerializer.Deserialize<List<Order>>(response, options) ?? new List<Order>();
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine($"Ошибка получения всех заказов: {ex.Message}");
+                return new List<Order>();
+            }
+        }
+
+        public async Task<bool> UpdateOrderStatusAsync(int orderId, string newStatus)
+        {
+            try
+            {
+                var response = await _httpClient.PutAsJsonAsync($"orders/status/{orderId}", new { status = newStatus });
+                return response.IsSuccessStatusCode;
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine($"Ошибка обновления статуса: {ex.Message}");
+                return false;
+            }
+        }
     }
 }
