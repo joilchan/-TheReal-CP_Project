@@ -12,14 +12,31 @@ public partial class ProfilePage : ContentPage
         InitializeComponent();
         _apiService = new ApiService();
 
-        // Заполняем данные из глобального хранилища
         var user = UserService.CurrentUser;
         if (user != null)
         {
+            NameHeaderLabel.Text = user.FullName;
             NameLabel.Text = user.FullName;
             LoginLabel.Text = user.Login;
             EmailLabel.Text = user.Email;
+
+            // Установка названия роли
+            RoleLabel.Text = GetRoleName(user.RoleId);
+
+            if (user.RoleId == 1) RoleLabel.TextColor = Color.FromArgb("#FF4444");
+            else if (user.RoleId == 3) RoleLabel.TextColor = Color.FromArgb("#A6FF00");
         }
+    }
+
+    private string GetRoleName(int roleId)
+    {
+        return roleId switch
+        {
+            1 => "Администратор",
+            3 => "Менеджер",
+            2 => "Покупатель",
+            _ => "Клиент"
+        };
     }
 
     // Подгружаем заказы при каждом открытии страницы профиля

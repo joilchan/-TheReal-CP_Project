@@ -332,6 +332,16 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "BroShopAPI.Controllers.StatisticsController",
+    "Method": "Get",
+    "RelativePath": "api/Statistics",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "UsersController",
     "Method": "Login",
     "RelativePath": "api/Users/login",

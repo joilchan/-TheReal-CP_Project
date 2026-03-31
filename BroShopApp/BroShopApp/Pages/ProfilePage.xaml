@@ -30,7 +30,8 @@
                            FontSize="24" 
                            FontAttributes="Bold" 
                            HorizontalOptions="Center"/>
-                    <Label Text="Постоянный покупатель" 
+                    <Label x:Name="RoleLabel"
+                           Text="Загрузка..."
                            TextColor="#80FFFFFF" 
                            FontSize="12" 
                            CharacterSpacing="1"
@@ -90,22 +91,6 @@
                                         <Label Text="{Binding DisplayDate}" TextColor="#60FFFFFF" FontSize="11"/>
                                         <Label Text="{Binding Address}" TextColor="White" FontSize="14" FontAttributes="Bold" LineBreakMode="TailTruncation"/>
                                     </VerticalStackLayout>
-
-                                    <VerticalStackLayout Grid.Row="0" Grid.Column="1">
-                                        <ImageButton
-                                                 Margin="45, 0, 0, 0"
-                                                 Source="close_icon.png" 
-                                                 HeightRequest="20" 
-                                                 WidthRequest="20"
-                                                 Padding="2"
-                                                 BackgroundColor="Transparent"
-                                                 VerticalOptions="Start"
-                                                 IsVisible="{Binding Status, Converter={StaticResource StatusToCancelVisible}}"
-                                                 Clicked="OnCancelOrderClicked"
-                                                 CommandParameter="{Binding .}">
-                                        </ImageButton>
-                                    </VerticalStackLayout>
-                                    
 
                                     <Label Grid.Row="1"
                                            Text="{Binding DisplayTotal}" 

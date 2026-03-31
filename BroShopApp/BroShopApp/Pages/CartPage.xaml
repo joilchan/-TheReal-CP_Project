@@ -22,7 +22,7 @@
 
                 <Label Grid.Column="1" Text="КОРЗИНА" TextColor="White" 
                        HorizontalOptions="Center" VerticalOptions="Center"
-                       FontAttributes="Bold" FontSize="20" CharacterSpacing="2" Margin="0, 10, 40, 0"/>
+                       FontAttributes="Bold" FontSize="20" CharacterSpacing="2" Margin="0, 10, 40, 10"/>
             </Grid>
 
             <CollectionView Grid.Row="1" x:Name="CartCollection" Margin="15,0" VerticalScrollBarVisibility="Never">

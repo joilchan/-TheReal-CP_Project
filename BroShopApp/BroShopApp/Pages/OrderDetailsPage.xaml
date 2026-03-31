@@ -1,8 +1,14 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:converters="clr-namespace:BroShopApp.Converters"
              x:Class="BroShopApp.Pages.OrderDetailsPage"
-             Title="OrderDetailsPage">
+             Title="OrderDetailsPage"
+             BackgroundColor="Black">
+
+    <ContentPage.Resources>
+        <converters:StatusToCancelVisible x:Key="StatusToCancelVisible" />
+    </ContentPage.Resources>
 
     <Grid RowDefinitions="Auto, *, Auto" Padding="20">
 
@@ -59,23 +65,34 @@
             </CollectionView.ItemTemplate>
         </CollectionView>
 
-        <VerticalStackLayout Grid.Row="2" Padding="0,20,0,10" Spacing="15">
+        <VerticalStackLayout Grid.Row="2" Padding="0,20,0,10" Spacing="10">
             <BoxView HeightRequest="1" Color="#33FFFFFF" Margin="0,0,0,5"/>
 
-            <HorizontalStackLayout HorizontalOptions="FillAndExpand">
+            <Grid ColumnDefinitions="*, Auto" Margin="0,0,0,5">
                 <Label Text="Сумма товаров:" TextColor="Gray" />
-                <Label Text="{Binding Amount, StringFormat='{0:N0} ₽'}" TextColor="White" HorizontalOptions="EndAndExpand"/>
-            </HorizontalStackLayout>
+                <Label Grid.Column="1" Text="{Binding Amount, StringFormat='{0:N0} ₽'}" TextColor="White"/>
+            </Grid>
 
-            <HorizontalStackLayout HorizontalOptions="FillAndExpand">
+            <Grid ColumnDefinitions="*, Auto" Margin="0,0,0,5">
                 <Label Text="Доставка:" TextColor="Gray" />
-                <Label Text="{Binding DeliveryCost, StringFormat='{0:N0} ₽'}" TextColor="White" HorizontalOptions="EndAndExpand"/>
-            </HorizontalStackLayout>
+                <Label Grid.Column="1" Text="{Binding DeliveryCost, StringFormat='{0:N0} ₽'}" TextColor="White"/>
+            </Grid>
 
-            <HorizontalStackLayout HorizontalOptions="FillAndExpand">
+            <Grid ColumnDefinitions="*, Auto" Margin="0,5,0,10">
                 <Label Text="ИТОГО К ОПЛАТЕ:" TextColor="White" FontAttributes="Bold" FontSize="18"/>
-                <Label Text="{Binding DisplayTotal}" TextColor="#A6FF00" FontAttributes="Bold" FontSize="18" HorizontalOptions="EndAndExpand"/>
-            </HorizontalStackLayout>
+                <Label Grid.Column="1" Text="{Binding DisplayTotal}" TextColor="#A6FF00" FontAttributes="Bold" FontSize="18"/>
+            </Grid>
+
+            <Button Text="ОТМЕНИТЬ ЗАКАЗ"
+                    Clicked="OnCancelClicked"
+                    BackgroundColor="Transparent"
+                    TextColor="#FF4444"
+                    BorderColor="#40FF4444"
+                    BorderWidth="1"
+                    CornerRadius="25"
+                    HeightRequest="50"
+                    FontAttributes="Bold"
+                    IsVisible="{Binding Status, Converter={StaticResource StatusToCancelVisible}}"/>
 
             <Button Text="ВЕРНУТЬСЯ" 
                     Clicked="OnCloseClicked" 
@@ -83,8 +100,7 @@
                     TextColor="Black" 
                     CornerRadius="25" 
                     HeightRequest="50" 
-                    FontAttributes="Bold" 
-                    Margin="0,10,0,0"/>
+                    FontAttributes="Bold"/>
         </VerticalStackLayout>
     </Grid>
 </ContentPage>

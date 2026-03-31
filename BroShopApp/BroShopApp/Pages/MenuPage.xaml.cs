@@ -17,10 +17,28 @@ public partial class MenuPage : ContentPage
 
     private void CheckAccess()
     {
-        if (UserService.IsLoggedIn)
+        var user = UserService.CurrentUser;
+        if (user != null)
         {
-            // Показываем админ-секцию только если RoleId == 1 (админ)
-            AdminSection.IsVisible = UserService.CurrentUser.RoleId == 1;
+            // 1. Если админ (Role 1) - видит ВСЁ в админ-секции
+            if (user.RoleId == 1)
+            {
+                AdminSection.IsVisible = true;
+                ManageOrdersRow.IsVisible = true;
+                OrderSeparator.IsVisible = true;
+            }
+            // 2. Если менеджер (Role 3) - видит только статистику
+            else if (user.RoleId == 3)
+            {
+                AdminSection.IsVisible = true;
+                ManageOrdersRow.IsVisible = false; // Скрываем заказы
+                OrderSeparator.IsVisible = false; // Скрываем полоску
+            }
+            // 3. Обычный пользователь
+            else
+            {
+                AdminSection.IsVisible = false;
+            }
         }
         else
         {
@@ -45,7 +63,7 @@ public partial class MenuPage : ContentPage
         await Navigation.PushAsync(new AdminOrdersPage());
 
     private async void OnAccountingClicked(object sender, EventArgs e) =>
-        await DisplayAlert("Админ", "Переход к учету и статистике", "OK");
+        await Navigation.PushAsync(new AdminStatisticsPage());
 
     private async void OnLogoutClicked(object sender, EventArgs e)
     {
@@ -61,4 +79,5 @@ public partial class MenuPage : ContentPage
     {
         await Navigation.PopAsync();
     }
+    
 }

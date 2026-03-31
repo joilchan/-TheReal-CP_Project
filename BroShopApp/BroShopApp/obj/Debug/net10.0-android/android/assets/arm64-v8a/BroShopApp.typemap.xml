@@ -1,4 +1,4 @@
-<api type="debug" assembly-name="BroShopApp" mvid="c580307ce4ab4e37a5e84dfc83c26270">
+<api type="debug" assembly-name="BroShopApp" mvid="e59ca0ace5db4f9da89a9d3e8391897d">
   <java-to-managed>
     <entry java-name="crc64f85eae34d37814ac/MainActivity" managed-name="BroShopApp.MainActivity, BroShopApp" managed-type-token-id="33554444" />
     <entry java-name="crc64f85eae34d37814ac/MainApplication" managed-name="BroShopApp.MainApplication, BroShopApp" managed-type-token-id="33554445" />

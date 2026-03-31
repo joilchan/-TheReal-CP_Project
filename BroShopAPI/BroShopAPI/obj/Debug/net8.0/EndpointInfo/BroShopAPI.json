@@ -599,6 +599,18 @@
         }
       }
     },
+    "/api/Statistics": {
+      "get": {
+        "tags": [
+          "Statistics"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/api/Users/login": {
       "post": {
         "tags": [

@@ -24,4 +24,34 @@ public partial class OrderDetailsPage : ContentPage
     }
 
     private async void OnCloseClicked(object sender, EventArgs e) => await Navigation.PopModalAsync();
+
+    private async void OnCancelClicked(object sender, EventArgs e)
+    {
+        // Объявляем кнопку один раз для всего метода
+        var cancelButton = sender as Button;
+
+        bool confirm = await DisplayAlert("Отмена заказа", "Вы уверены, что хотите отменить этот заказ?", "Да", "Нет");
+
+        if (confirm)
+        {
+            // Выключаем кнопку, чтобы избежать спама нажатиями
+            if (cancelButton != null) cancelButton.IsEnabled = false;
+
+            var success = await _apiService.UpdateOrderStatusAsync(_currentOrder.OrderId, "Отменен");
+
+            if (success)
+            {
+                _currentOrder.Status = "Отменен";
+                await DisplayAlert("Готово", "Заказ успешно отменен", "OK");
+                await Navigation.PopModalAsync();
+            }
+            else
+            {
+                await DisplayAlert("Ошибка", "Не удалось отменить заказ. Попробуйте позже.", "OK");
+
+                // Если произошла ошибка, возвращаем кнопке активность
+                if (cancelButton != null) cancelButton.IsEnabled = true;
+            }
+        }
+    }
 }

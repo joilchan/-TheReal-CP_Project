@@ -228,5 +228,32 @@ namespace BroShopApp.Services
                 return false;
             }
         }
+
+        public async Task<StoreStatistics> GetStatisticsAsync()
+        {
+            try
+            {
+                // Убираем "api/", так как оно уже есть в BaseAddress
+                var response = await _httpClient.GetAsync("statistics");
+
+                if (response.IsSuccessStatusCode)
+                {
+                    var content = await response.Content.ReadAsStringAsync();
+                    var options = new JsonSerializerOptions { PropertyNameCaseInsensitive = true };
+                    return JsonSerializer.Deserialize<StoreStatistics>(content, options);
+                }
+                else
+                {
+                    // Это поможет увидеть ошибку в консоли вывода (Output), если она будет
+                    Debug.WriteLine($"Ошибка статистики: {response.StatusCode}");
+                }
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine($"Ошибка при получении статистики: {ex.Message}");
+            }
+
+            return new StoreStatistics();
+        }
     }
 }
