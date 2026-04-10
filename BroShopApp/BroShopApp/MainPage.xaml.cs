@@ -37,7 +37,7 @@ namespace BroShopApp
 
                 if (products != null)
                 {
-                    _allProducts = products; // ОБЯЗАТЕЛЬНО сохраняем копию здесь
+                    _allProducts = products;
                     ProductsCollection.ItemsSource = _allProducts;
                 }
             }

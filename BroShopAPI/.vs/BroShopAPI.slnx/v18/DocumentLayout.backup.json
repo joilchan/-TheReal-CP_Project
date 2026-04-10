@@ -1,105 +1,109 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\joil\\Desktop\\(TheReal)CP_Project\\BroShopAPI\\",
+  "WorkspaceRootPath": "C:\\Users\\joil\\Desktop\\CP_BroShop\\BroShopAPI\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{2106E996-FF3E-29AA-192E-F0ADB111CF68}|BroShopAPI\\BroShopAPI.csproj|c:\\users\\joil\\desktop\\(thereal)cp_project\\broshopapi\\broshopapi\\controllers\\statisticscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2106E996-FF3E-29AA-192E-F0ADB111CF68}|BroShopAPI\\BroShopAPI.csproj|solutionrelative:broshopapi\\controllers\\statisticscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{2106E996-FF3E-29AA-192E-F0ADB111CF68}|BroShopAPI\\BroShopAPI.csproj|c:\\users\\joil\\desktop\\cp_broshop\\broshopapi\\broshopapi\\unittests\\productscontrollertests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2106E996-FF3E-29AA-192E-F0ADB111CF68}|BroShopAPI\\BroShopAPI.csproj|solutionrelative:broshopapi\\unittests\\productscontrollertests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2106E996-FF3E-29AA-192E-F0ADB111CF68}|BroShopAPI\\BroShopAPI.csproj|c:\\users\\joil\\desktop\\(thereal)cp_project\\broshopapi\\broshopapi\\controllers\\orderscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2106E996-FF3E-29AA-192E-F0ADB111CF68}|BroShopAPI\\BroShopAPI.csproj|solutionrelative:broshopapi\\controllers\\orderscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2106E996-FF3E-29AA-192E-F0ADB111CF68}|BroShopAPI\\BroShopAPI.csproj|c:\\users\\joil\\desktop\\(thereal)cp_project\\broshopapi\\broshopapi\\models\\updatestatusdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2106E996-FF3E-29AA-192E-F0ADB111CF68}|BroShopAPI\\BroShopAPI.csproj|solutionrelative:broshopapi\\models\\updatestatusdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2106E996-FF3E-29AA-192E-F0ADB111CF68}|BroShopAPI\\BroShopAPI.csproj|c:\\users\\joil\\desktop\\(thereal)cp_project\\broshopapi\\broshopapi\\models\\order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2106E996-FF3E-29AA-192E-F0ADB111CF68}|BroShopAPI\\BroShopAPI.csproj|solutionrelative:broshopapi\\models\\order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2106E996-FF3E-29AA-192E-F0ADB111CF68}|BroShopAPI\\BroShopAPI.csproj|c:\\users\\joil\\desktop\\(thereal)cp_project\\broshopapi\\broshopapi\\models\\createorderdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2106E996-FF3E-29AA-192E-F0ADB111CF68}|BroShopAPI\\BroShopAPI.csproj|solutionrelative:broshopapi\\models\\createorderdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2106E996-FF3E-29AA-192E-F0ADB111CF68}|BroShopAPI\\BroShopAPI.csproj|c:\\users\\joil\\desktop\\(thereal)cp_project\\broshopapi\\broshopapi\\controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2106E996-FF3E-29AA-192E-F0ADB111CF68}|BroShopAPI\\BroShopAPI.csproj|solutionrelative:broshopapi\\controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2106E996-FF3E-29AA-192E-F0ADB111CF68}|BroShopAPI\\BroShopAPI.csproj|c:\\users\\joil\\desktop\\(thereal)cp_project\\broshopapi\\broshopapi\\controllers\\producttypescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2106E996-FF3E-29AA-192E-F0ADB111CF68}|BroShopAPI\\BroShopAPI.csproj|solutionrelative:broshopapi\\controllers\\producttypescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2106E996-FF3E-29AA-192E-F0ADB111CF68}|BroShopAPI\\BroShopAPI.csproj|c:\\users\\joil\\desktop\\(thereal)cp_project\\broshopapi\\broshopapi\\controllers\\productscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{2106E996-FF3E-29AA-192E-F0ADB111CF68}|BroShopAPI\\BroShopAPI.csproj|c:\\users\\joil\\desktop\\cp_broshop\\broshopapi\\broshopapi\\controllers\\productscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{2106E996-FF3E-29AA-192E-F0ADB111CF68}|BroShopAPI\\BroShopAPI.csproj|solutionrelative:broshopapi\\controllers\\productscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2106E996-FF3E-29AA-192E-F0ADB111CF68}|BroShopAPI\\BroShopAPI.csproj|c:\\users\\joil\\desktop\\(thereal)cp_project\\broshopapi\\broshopapi\\controllers\\reviewscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{2106E996-FF3E-29AA-192E-F0ADB111CF68}|BroShopAPI\\BroShopAPI.csproj|c:\\users\\joil\\desktop\\cp_broshop\\broshopapi\\broshopapi\\controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2106E996-FF3E-29AA-192E-F0ADB111CF68}|BroShopAPI\\BroShopAPI.csproj|solutionrelative:broshopapi\\controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2106E996-FF3E-29AA-192E-F0ADB111CF68}|BroShopAPI\\BroShopAPI.csproj|c:\\users\\joil\\desktop\\cp_broshop\\broshopapi\\broshopapi\\controllers\\statisticscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2106E996-FF3E-29AA-192E-F0ADB111CF68}|BroShopAPI\\BroShopAPI.csproj|solutionrelative:broshopapi\\controllers\\statisticscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2106E996-FF3E-29AA-192E-F0ADB111CF68}|BroShopAPI\\BroShopAPI.csproj|c:\\users\\joil\\desktop\\cp_broshop\\broshopapi\\broshopapi\\controllers\\orderscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2106E996-FF3E-29AA-192E-F0ADB111CF68}|BroShopAPI\\BroShopAPI.csproj|solutionrelative:broshopapi\\controllers\\orderscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2106E996-FF3E-29AA-192E-F0ADB111CF68}|BroShopAPI\\BroShopAPI.csproj|c:\\users\\joil\\desktop\\cp_broshop\\broshopapi\\broshopapi\\models\\updatestatusdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2106E996-FF3E-29AA-192E-F0ADB111CF68}|BroShopAPI\\BroShopAPI.csproj|solutionrelative:broshopapi\\models\\updatestatusdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2106E996-FF3E-29AA-192E-F0ADB111CF68}|BroShopAPI\\BroShopAPI.csproj|c:\\users\\joil\\desktop\\cp_broshop\\broshopapi\\broshopapi\\models\\order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2106E996-FF3E-29AA-192E-F0ADB111CF68}|BroShopAPI\\BroShopAPI.csproj|solutionrelative:broshopapi\\models\\order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2106E996-FF3E-29AA-192E-F0ADB111CF68}|BroShopAPI\\BroShopAPI.csproj|c:\\users\\joil\\desktop\\cp_broshop\\broshopapi\\broshopapi\\models\\createorderdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2106E996-FF3E-29AA-192E-F0ADB111CF68}|BroShopAPI\\BroShopAPI.csproj|solutionrelative:broshopapi\\models\\createorderdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2106E996-FF3E-29AA-192E-F0ADB111CF68}|BroShopAPI\\BroShopAPI.csproj|c:\\users\\joil\\desktop\\cp_broshop\\broshopapi\\broshopapi\\controllers\\producttypescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2106E996-FF3E-29AA-192E-F0ADB111CF68}|BroShopAPI\\BroShopAPI.csproj|solutionrelative:broshopapi\\controllers\\producttypescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2106E996-FF3E-29AA-192E-F0ADB111CF68}|BroShopAPI\\BroShopAPI.csproj|c:\\users\\joil\\desktop\\cp_broshop\\broshopapi\\broshopapi\\controllers\\reviewscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{2106E996-FF3E-29AA-192E-F0ADB111CF68}|BroShopAPI\\BroShopAPI.csproj|solutionrelative:broshopapi\\controllers\\reviewscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2106E996-FF3E-29AA-192E-F0ADB111CF68}|BroShopAPI\\BroShopAPI.csproj|c:\\users\\joil\\desktop\\(thereal)cp_project\\broshopapi\\broshopapi\\controllers\\cartscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{2106E996-FF3E-29AA-192E-F0ADB111CF68}|BroShopAPI\\BroShopAPI.csproj|c:\\users\\joil\\desktop\\cp_broshop\\broshopapi\\broshopapi\\controllers\\cartscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{2106E996-FF3E-29AA-192E-F0ADB111CF68}|BroShopAPI\\BroShopAPI.csproj|solutionrelative:broshopapi\\controllers\\cartscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2106E996-FF3E-29AA-192E-F0ADB111CF68}|BroShopAPI\\BroShopAPI.csproj|c:\\users\\joil\\desktop\\(thereal)cp_project\\broshopapi\\broshopapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{2106E996-FF3E-29AA-192E-F0ADB111CF68}|BroShopAPI\\BroShopAPI.csproj|c:\\users\\joil\\desktop\\cp_broshop\\broshopapi\\broshopapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{2106E996-FF3E-29AA-192E-F0ADB111CF68}|BroShopAPI\\BroShopAPI.csproj|solutionrelative:broshopapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2106E996-FF3E-29AA-192E-F0ADB111CF68}|BroShopAPI\\BroShopAPI.csproj|c:\\users\\joil\\desktop\\(thereal)cp_project\\broshopapi\\broshopapi\\models\\reviewdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{2106E996-FF3E-29AA-192E-F0ADB111CF68}|BroShopAPI\\BroShopAPI.csproj|c:\\users\\joil\\desktop\\cp_broshop\\broshopapi\\broshopapi\\models\\reviewdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{2106E996-FF3E-29AA-192E-F0ADB111CF68}|BroShopAPI\\BroShopAPI.csproj|solutionrelative:broshopapi\\models\\reviewdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2106E996-FF3E-29AA-192E-F0ADB111CF68}|BroShopAPI\\BroShopAPI.csproj|c:\\users\\joil\\desktop\\(thereal)cp_project\\broshopapi\\broshopapi\\models\\review.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{2106E996-FF3E-29AA-192E-F0ADB111CF68}|BroShopAPI\\BroShopAPI.csproj|c:\\users\\joil\\desktop\\cp_broshop\\broshopapi\\broshopapi\\models\\review.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{2106E996-FF3E-29AA-192E-F0ADB111CF68}|BroShopAPI\\BroShopAPI.csproj|solutionrelative:broshopapi\\models\\review.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2106E996-FF3E-29AA-192E-F0ADB111CF68}|BroShopAPI\\BroShopAPI.csproj|c:\\users\\joil\\desktop\\(thereal)cp_project\\broshopapi\\broshopapi\\models\\class.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{2106E996-FF3E-29AA-192E-F0ADB111CF68}|BroShopAPI\\BroShopAPI.csproj|c:\\users\\joil\\desktop\\cp_broshop\\broshopapi\\broshopapi\\models\\class.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{2106E996-FF3E-29AA-192E-F0ADB111CF68}|BroShopAPI\\BroShopAPI.csproj|solutionrelative:broshopapi\\models\\class.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2106E996-FF3E-29AA-192E-F0ADB111CF68}|BroShopAPI\\BroShopAPI.csproj|c:\\users\\joil\\desktop\\(thereal)cp_project\\broshopapi\\broshopapi\\models\\cart.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{2106E996-FF3E-29AA-192E-F0ADB111CF68}|BroShopAPI\\BroShopAPI.csproj|c:\\users\\joil\\desktop\\cp_broshop\\broshopapi\\broshopapi\\models\\cart.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{2106E996-FF3E-29AA-192E-F0ADB111CF68}|BroShopAPI\\BroShopAPI.csproj|solutionrelative:broshopapi\\models\\cart.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2106E996-FF3E-29AA-192E-F0ADB111CF68}|BroShopAPI\\BroShopAPI.csproj|c:\\users\\joil\\desktop\\(thereal)cp_project\\broshopapi\\broshopapi\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{2106E996-FF3E-29AA-192E-F0ADB111CF68}|BroShopAPI\\BroShopAPI.csproj|c:\\users\\joil\\desktop\\cp_broshop\\broshopapi\\broshopapi\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{2106E996-FF3E-29AA-192E-F0ADB111CF68}|BroShopAPI\\BroShopAPI.csproj|solutionrelative:broshopapi\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2106E996-FF3E-29AA-192E-F0ADB111CF68}|BroShopAPI\\BroShopAPI.csproj|c:\\users\\joil\\desktop\\(thereal)cp_project\\broshopapi\\broshopapi\\controllers\\brandscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{2106E996-FF3E-29AA-192E-F0ADB111CF68}|BroShopAPI\\BroShopAPI.csproj|c:\\users\\joil\\desktop\\cp_broshop\\broshopapi\\broshopapi\\controllers\\brandscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{2106E996-FF3E-29AA-192E-F0ADB111CF68}|BroShopAPI\\BroShopAPI.csproj|solutionrelative:broshopapi\\controllers\\brandscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2106E996-FF3E-29AA-192E-F0ADB111CF68}|BroShopAPI\\BroShopAPI.csproj|c:\\users\\joil\\desktop\\(thereal)cp_project\\broshopapi\\broshopapi\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{2106E996-FF3E-29AA-192E-F0ADB111CF68}|BroShopAPI\\BroShopAPI.csproj|c:\\users\\joil\\desktop\\cp_broshop\\broshopapi\\broshopapi\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{2106E996-FF3E-29AA-192E-F0ADB111CF68}|BroShopAPI\\BroShopAPI.csproj|solutionrelative:broshopapi\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2106E996-FF3E-29AA-192E-F0ADB111CF68}|BroShopAPI\\BroShopAPI.csproj|c:\\users\\joil\\desktop\\(thereal)cp_project\\broshopapi\\broshopapi\\models\\productvariant.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{2106E996-FF3E-29AA-192E-F0ADB111CF68}|BroShopAPI\\BroShopAPI.csproj|c:\\users\\joil\\desktop\\cp_broshop\\broshopapi\\broshopapi\\models\\productvariant.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{2106E996-FF3E-29AA-192E-F0ADB111CF68}|BroShopAPI\\BroShopAPI.csproj|solutionrelative:broshopapi\\models\\productvariant.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2106E996-FF3E-29AA-192E-F0ADB111CF68}|BroShopAPI\\BroShopAPI.csproj|c:\\users\\joil\\desktop\\(thereal)cp_project\\broshopapi\\broshopapi\\models\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{2106E996-FF3E-29AA-192E-F0ADB111CF68}|BroShopAPI\\BroShopAPI.csproj|c:\\users\\joil\\desktop\\cp_broshop\\broshopapi\\broshopapi\\models\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{2106E996-FF3E-29AA-192E-F0ADB111CF68}|BroShopAPI\\BroShopAPI.csproj|solutionrelative:broshopapi\\models\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2106E996-FF3E-29AA-192E-F0ADB111CF68}|BroShopAPI\\BroShopAPI.csproj|c:\\users\\joil\\desktop\\(thereal)cp_project\\broshopapi\\broshopapi\\models\\producttype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{2106E996-FF3E-29AA-192E-F0ADB111CF68}|BroShopAPI\\BroShopAPI.csproj|c:\\users\\joil\\desktop\\cp_broshop\\broshopapi\\broshopapi\\models\\producttype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{2106E996-FF3E-29AA-192E-F0ADB111CF68}|BroShopAPI\\BroShopAPI.csproj|solutionrelative:broshopapi\\models\\producttype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2106E996-FF3E-29AA-192E-F0ADB111CF68}|BroShopAPI\\BroShopAPI.csproj|c:\\users\\joil\\desktop\\(thereal)cp_project\\broshopapi\\broshopapi\\models\\brand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{2106E996-FF3E-29AA-192E-F0ADB111CF68}|BroShopAPI\\BroShopAPI.csproj|c:\\users\\joil\\desktop\\cp_broshop\\broshopapi\\broshopapi\\models\\brand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{2106E996-FF3E-29AA-192E-F0ADB111CF68}|BroShopAPI\\BroShopAPI.csproj|solutionrelative:broshopapi\\models\\brand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2106E996-FF3E-29AA-192E-F0ADB111CF68}|BroShopAPI\\BroShopAPI.csproj|c:\\users\\joil\\desktop\\(thereal)cp_project\\broshopapi\\broshopapi\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "AbsoluteMoniker": "D:0:0:{2106E996-FF3E-29AA-192E-F0ADB111CF68}|BroShopAPI\\BroShopAPI.csproj|c:\\users\\joil\\desktop\\cp_broshop\\broshopapi\\broshopapi\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{2106E996-FF3E-29AA-192E-F0ADB111CF68}|BroShopAPI\\BroShopAPI.csproj|solutionrelative:broshopapi\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2106E996-FF3E-29AA-192E-F0ADB111CF68}|BroShopAPI\\BroShopAPI.csproj|c:\\users\\joil\\desktop\\(thereal)cp_project\\broshopapi\\broshopapi\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "AbsoluteMoniker": "D:0:0:{2106E996-FF3E-29AA-192E-F0ADB111CF68}|BroShopAPI\\BroShopAPI.csproj|c:\\users\\joil\\desktop\\cp_broshop\\broshopapi\\broshopapi\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{2106E996-FF3E-29AA-192E-F0ADB111CF68}|BroShopAPI\\BroShopAPI.csproj|solutionrelative:broshopapi\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2106E996-FF3E-29AA-192E-F0ADB111CF68}|BroShopAPI\\BroShopAPI.csproj|c:\\users\\joil\\desktop\\(thereal)cp_project\\broshopapi\\broshopapi\\weatherforecast.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{2106E996-FF3E-29AA-192E-F0ADB111CF68}|BroShopAPI\\BroShopAPI.csproj|c:\\users\\joil\\desktop\\cp_broshop\\broshopapi\\broshopapi\\weatherforecast.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{2106E996-FF3E-29AA-192E-F0ADB111CF68}|BroShopAPI\\BroShopAPI.csproj|solutionrelative:broshopapi\\weatherforecast.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -127,23 +131,35 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "StatisticsController.cs",
-              "DocumentMoniker": "C:\\Users\\joil\\Desktop\\(TheReal)CP_Project\\BroShopAPI\\BroShopAPI\\Controllers\\StatisticsController.cs",
-              "RelativeDocumentMoniker": "BroShopAPI\\Controllers\\StatisticsController.cs",
-              "ToolTip": "C:\\Users\\joil\\Desktop\\(TheReal)CP_Project\\BroShopAPI\\BroShopAPI\\Controllers\\StatisticsController.cs",
-              "RelativeToolTip": "BroShopAPI\\Controllers\\StatisticsController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAARAAAAAAAAAA==",
+              "Title": "ProductsControllerTests.cs",
+              "DocumentMoniker": "C:\\Users\\joil\\Desktop\\CP_BroShop\\BroShopAPI\\BroShopAPI\\UnitTests\\ProductsControllerTests.cs",
+              "RelativeDocumentMoniker": "BroShopAPI\\UnitTests\\ProductsControllerTests.cs",
+              "ToolTip": "C:\\Users\\joil\\Desktop\\CP_BroShop\\BroShopAPI\\BroShopAPI\\UnitTests\\ProductsControllerTests.cs",
+              "RelativeToolTip": "BroShopAPI\\UnitTests\\ProductsControllerTests.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-31T11:19:59.073Z",
+              "WhenOpened": "2026-04-05T13:36:10.066Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 2,
+              "Title": "UsersController.cs",
+              "DocumentMoniker": "C:\\Users\\joil\\Desktop\\CP_BroShop\\BroShopAPI\\BroShopAPI\\Controllers\\UsersController.cs",
+              "RelativeDocumentMoniker": "BroShopAPI\\Controllers\\UsersController.cs",
+              "ToolTip": "C:\\Users\\joil\\Desktop\\CP_BroShop\\BroShopAPI\\BroShopAPI\\Controllers\\UsersController.cs",
+              "RelativeToolTip": "BroShopAPI\\Controllers\\UsersController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-27T15:42:39.59Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
               "Title": "Order.cs",
-              "DocumentMoniker": "C:\\Users\\joil\\Desktop\\(TheReal)CP_Project\\BroShopAPI\\BroShopAPI\\Models\\Order.cs",
+              "DocumentMoniker": "C:\\Users\\joil\\Desktop\\CP_BroShop\\BroShopAPI\\BroShopAPI\\Models\\Order.cs",
               "RelativeDocumentMoniker": "BroShopAPI\\Models\\Order.cs",
-              "ToolTip": "C:\\Users\\joil\\Desktop\\(TheReal)CP_Project\\BroShopAPI\\BroShopAPI\\Models\\Order.cs",
+              "ToolTip": "C:\\Users\\joil\\Desktop\\CP_BroShop\\BroShopAPI\\BroShopAPI\\Models\\Order.cs",
               "RelativeToolTip": "BroShopAPI\\Models\\Order.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -151,24 +167,23 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 4,
               "Title": "OrdersController.cs",
-              "DocumentMoniker": "C:\\Users\\joil\\Desktop\\(TheReal)CP_Project\\BroShopAPI\\BroShopAPI\\Controllers\\OrdersController.cs",
+              "DocumentMoniker": "C:\\Users\\joil\\Desktop\\CP_BroShop\\BroShopAPI\\BroShopAPI\\Controllers\\OrdersController.cs",
               "RelativeDocumentMoniker": "BroShopAPI\\Controllers\\OrdersController.cs",
-              "ToolTip": "C:\\Users\\joil\\Desktop\\(TheReal)CP_Project\\BroShopAPI\\BroShopAPI\\Controllers\\OrdersController.cs",
+              "ToolTip": "C:\\Users\\joil\\Desktop\\CP_BroShop\\BroShopAPI\\BroShopAPI\\Controllers\\OrdersController.cs",
               "RelativeToolTip": "BroShopAPI\\Controllers\\OrdersController.cs",
               "ViewState": "AgIAAGQAAAAAAAAAAAA6wH8AAAAeAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-29T19:37:37.976Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-29T19:37:37.976Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 5,
               "Title": "UpdateStatusDto.cs",
-              "DocumentMoniker": "C:\\Users\\joil\\Desktop\\(TheReal)CP_Project\\BroShopAPI\\BroShopAPI\\Models\\UpdateStatusDto.cs",
+              "DocumentMoniker": "C:\\Users\\joil\\Desktop\\CP_BroShop\\BroShopAPI\\BroShopAPI\\Models\\UpdateStatusDto.cs",
               "RelativeDocumentMoniker": "BroShopAPI\\Models\\UpdateStatusDto.cs",
-              "ToolTip": "C:\\Users\\joil\\Desktop\\(TheReal)CP_Project\\BroShopAPI\\BroShopAPI\\Models\\UpdateStatusDto.cs",
+              "ToolTip": "C:\\Users\\joil\\Desktop\\CP_BroShop\\BroShopAPI\\BroShopAPI\\Models\\UpdateStatusDto.cs",
               "RelativeToolTip": "BroShopAPI\\Models\\UpdateStatusDto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAqAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -176,23 +191,35 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 1,
               "Title": "ProductsController.cs",
-              "DocumentMoniker": "C:\\Users\\joil\\Desktop\\(TheReal)CP_Project\\BroShopAPI\\BroShopAPI\\Controllers\\ProductsController.cs",
+              "DocumentMoniker": "C:\\Users\\joil\\Desktop\\CP_BroShop\\BroShopAPI\\BroShopAPI\\Controllers\\ProductsController.cs",
               "RelativeDocumentMoniker": "BroShopAPI\\Controllers\\ProductsController.cs",
-              "ToolTip": "C:\\Users\\joil\\Desktop\\(TheReal)CP_Project\\BroShopAPI\\BroShopAPI\\Controllers\\ProductsController.cs",
+              "ToolTip": "C:\\Users\\joil\\Desktop\\CP_BroShop\\BroShopAPI\\BroShopAPI\\Controllers\\ProductsController.cs",
               "RelativeToolTip": "BroShopAPI\\Controllers\\ProductsController.cs",
-              "ViewState": "AgIAAE8AAAAAAAAAAAAwwHUAAAABAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAGwAAAAuAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-03-21T10:06:50.413Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 3,
+              "Title": "StatisticsController.cs",
+              "DocumentMoniker": "C:\\Users\\joil\\Desktop\\CP_BroShop\\BroShopAPI\\BroShopAPI\\Controllers\\StatisticsController.cs",
+              "RelativeDocumentMoniker": "BroShopAPI\\Controllers\\StatisticsController.cs",
+              "ToolTip": "C:\\Users\\joil\\Desktop\\CP_BroShop\\BroShopAPI\\BroShopAPI\\Controllers\\StatisticsController.cs",
+              "RelativeToolTip": "BroShopAPI\\Controllers\\StatisticsController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-31T11:19:59.073Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
               "Title": "ReviewsController.cs",
-              "DocumentMoniker": "C:\\Users\\joil\\Desktop\\(TheReal)CP_Project\\BroShopAPI\\BroShopAPI\\Controllers\\ReviewsController.cs",
+              "DocumentMoniker": "C:\\Users\\joil\\Desktop\\CP_BroShop\\BroShopAPI\\BroShopAPI\\Controllers\\ReviewsController.cs",
               "RelativeDocumentMoniker": "BroShopAPI\\Controllers\\ReviewsController.cs",
-              "ToolTip": "C:\\Users\\joil\\Desktop\\(TheReal)CP_Project\\BroShopAPI\\BroShopAPI\\Controllers\\ReviewsController.cs",
+              "ToolTip": "C:\\Users\\joil\\Desktop\\CP_BroShop\\BroShopAPI\\BroShopAPI\\Controllers\\ReviewsController.cs",
               "RelativeToolTip": "BroShopAPI\\Controllers\\ReviewsController.cs",
               "ViewState": "AgIAAAUAAAAAAAAAAAAowCoAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -200,11 +227,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 8,
               "Title": "ProductTypesController.cs",
-              "DocumentMoniker": "C:\\Users\\joil\\Desktop\\(TheReal)CP_Project\\BroShopAPI\\BroShopAPI\\Controllers\\ProductTypesController.cs",
+              "DocumentMoniker": "C:\\Users\\joil\\Desktop\\CP_BroShop\\BroShopAPI\\BroShopAPI\\Controllers\\ProductTypesController.cs",
               "RelativeDocumentMoniker": "BroShopAPI\\Controllers\\ProductTypesController.cs",
-              "ToolTip": "C:\\Users\\joil\\Desktop\\(TheReal)CP_Project\\BroShopAPI\\BroShopAPI\\Controllers\\ProductTypesController.cs",
+              "ToolTip": "C:\\Users\\joil\\Desktop\\CP_BroShop\\BroShopAPI\\BroShopAPI\\Controllers\\ProductTypesController.cs",
               "RelativeToolTip": "BroShopAPI\\Controllers\\ProductTypesController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -212,23 +239,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "UsersController.cs",
-              "DocumentMoniker": "C:\\Users\\joil\\Desktop\\(TheReal)CP_Project\\BroShopAPI\\BroShopAPI\\Controllers\\UsersController.cs",
-              "RelativeDocumentMoniker": "BroShopAPI\\Controllers\\UsersController.cs",
-              "ToolTip": "C:\\Users\\joil\\Desktop\\(TheReal)CP_Project\\BroShopAPI\\BroShopAPI\\Controllers\\UsersController.cs",
-              "RelativeToolTip": "BroShopAPI\\Controllers\\UsersController.cs",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAgwCIAAAAYAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-27T15:42:39.59Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 7,
               "Title": "CreateOrderDto.cs",
-              "DocumentMoniker": "C:\\Users\\joil\\Desktop\\(TheReal)CP_Project\\BroShopAPI\\BroShopAPI\\Models\\CreateOrderDto.cs",
+              "DocumentMoniker": "C:\\Users\\joil\\Desktop\\CP_BroShop\\BroShopAPI\\BroShopAPI\\Models\\CreateOrderDto.cs",
               "RelativeDocumentMoniker": "BroShopAPI\\Models\\CreateOrderDto.cs",
-              "ToolTip": "C:\\Users\\joil\\Desktop\\(TheReal)CP_Project\\BroShopAPI\\BroShopAPI\\Models\\CreateOrderDto.cs",
+              "ToolTip": "C:\\Users\\joil\\Desktop\\CP_BroShop\\BroShopAPI\\BroShopAPI\\Models\\CreateOrderDto.cs",
               "RelativeToolTip": "BroShopAPI\\Models\\CreateOrderDto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAA5AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -236,11 +251,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 10,
               "Title": "CartsController.cs",
-              "DocumentMoniker": "C:\\Users\\joil\\Desktop\\(TheReal)CP_Project\\BroShopAPI\\BroShopAPI\\Controllers\\CartsController.cs",
+              "DocumentMoniker": "C:\\Users\\joil\\Desktop\\CP_BroShop\\BroShopAPI\\BroShopAPI\\Controllers\\CartsController.cs",
               "RelativeDocumentMoniker": "BroShopAPI\\Controllers\\CartsController.cs",
-              "ToolTip": "C:\\Users\\joil\\Desktop\\(TheReal)CP_Project\\BroShopAPI\\BroShopAPI\\Controllers\\CartsController.cs",
+              "ToolTip": "C:\\Users\\joil\\Desktop\\CP_BroShop\\BroShopAPI\\BroShopAPI\\Controllers\\CartsController.cs",
               "RelativeToolTip": "BroShopAPI\\Controllers\\CartsController.cs",
               "ViewState": "AgIAACcAAAAAAAAAAAAIwE0AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -248,11 +263,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 22,
               "Title": "Brand.cs",
-              "DocumentMoniker": "C:\\Users\\joil\\Desktop\\(TheReal)CP_Project\\BroShopAPI\\BroShopAPI\\Models\\Brand.cs",
+              "DocumentMoniker": "C:\\Users\\joil\\Desktop\\CP_BroShop\\BroShopAPI\\BroShopAPI\\Models\\Brand.cs",
               "RelativeDocumentMoniker": "BroShopAPI\\Models\\Brand.cs",
-              "ToolTip": "C:\\Users\\joil\\Desktop\\(TheReal)CP_Project\\BroShopAPI\\BroShopAPI\\Models\\Brand.cs",
+              "ToolTip": "C:\\Users\\joil\\Desktop\\CP_BroShop\\BroShopAPI\\BroShopAPI\\Models\\Brand.cs",
               "RelativeToolTip": "BroShopAPI\\Models\\Brand.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -260,11 +275,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 16,
               "Title": "User.cs",
-              "DocumentMoniker": "C:\\Users\\joil\\Desktop\\(TheReal)CP_Project\\BroShopAPI\\BroShopAPI\\Models\\User.cs",
+              "DocumentMoniker": "C:\\Users\\joil\\Desktop\\CP_BroShop\\BroShopAPI\\BroShopAPI\\Models\\User.cs",
               "RelativeDocumentMoniker": "BroShopAPI\\Models\\User.cs",
-              "ToolTip": "C:\\Users\\joil\\Desktop\\(TheReal)CP_Project\\BroShopAPI\\BroShopAPI\\Models\\User.cs",
+              "ToolTip": "C:\\Users\\joil\\Desktop\\CP_BroShop\\BroShopAPI\\BroShopAPI\\Models\\User.cs",
               "RelativeToolTip": "BroShopAPI\\Models\\User.cs",
               "ViewState": "AgIAAAQAAAAAAAAAAAAkwBIAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -272,11 +287,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 12,
               "Title": "ReviewDto.cs",
-              "DocumentMoniker": "C:\\Users\\joil\\Desktop\\(TheReal)CP_Project\\BroShopAPI\\BroShopAPI\\Models\\ReviewDto.cs",
+              "DocumentMoniker": "C:\\Users\\joil\\Desktop\\CP_BroShop\\BroShopAPI\\BroShopAPI\\Models\\ReviewDto.cs",
               "RelativeDocumentMoniker": "BroShopAPI\\Models\\ReviewDto.cs",
-              "ToolTip": "C:\\Users\\joil\\Desktop\\(TheReal)CP_Project\\BroShopAPI\\BroShopAPI\\Models\\ReviewDto.cs",
+              "ToolTip": "C:\\Users\\joil\\Desktop\\CP_BroShop\\BroShopAPI\\BroShopAPI\\Models\\ReviewDto.cs",
               "RelativeToolTip": "BroShopAPI\\Models\\ReviewDto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -284,11 +299,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 11,
               "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\joil\\Desktop\\(TheReal)CP_Project\\BroShopAPI\\BroShopAPI\\Program.cs",
+              "DocumentMoniker": "C:\\Users\\joil\\Desktop\\CP_BroShop\\BroShopAPI\\BroShopAPI\\Program.cs",
               "RelativeDocumentMoniker": "BroShopAPI\\Program.cs",
-              "ToolTip": "C:\\Users\\joil\\Desktop\\(TheReal)CP_Project\\BroShopAPI\\BroShopAPI\\Program.cs",
+              "ToolTip": "C:\\Users\\joil\\Desktop\\CP_BroShop\\BroShopAPI\\BroShopAPI\\Program.cs",
               "RelativeToolTip": "BroShopAPI\\Program.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAHAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -296,11 +311,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 14,
               "Title": "Class.cs",
-              "DocumentMoniker": "C:\\Users\\joil\\Desktop\\(TheReal)CP_Project\\BroShopAPI\\BroShopAPI\\Models\\Class.cs",
+              "DocumentMoniker": "C:\\Users\\joil\\Desktop\\CP_BroShop\\BroShopAPI\\BroShopAPI\\Models\\Class.cs",
               "RelativeDocumentMoniker": "BroShopAPI\\Models\\Class.cs",
-              "ToolTip": "C:\\Users\\joil\\Desktop\\(TheReal)CP_Project\\BroShopAPI\\BroShopAPI\\Models\\Class.cs",
+              "ToolTip": "C:\\Users\\joil\\Desktop\\CP_BroShop\\BroShopAPI\\BroShopAPI\\Models\\Class.cs",
               "RelativeToolTip": "BroShopAPI\\Models\\Class.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -308,11 +323,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 13,
               "Title": "Review.cs",
-              "DocumentMoniker": "C:\\Users\\joil\\Desktop\\(TheReal)CP_Project\\BroShopAPI\\BroShopAPI\\Models\\Review.cs",
+              "DocumentMoniker": "C:\\Users\\joil\\Desktop\\CP_BroShop\\BroShopAPI\\BroShopAPI\\Models\\Review.cs",
               "RelativeDocumentMoniker": "BroShopAPI\\Models\\Review.cs",
-              "ToolTip": "C:\\Users\\joil\\Desktop\\(TheReal)CP_Project\\BroShopAPI\\BroShopAPI\\Models\\Review.cs",
+              "ToolTip": "C:\\Users\\joil\\Desktop\\CP_BroShop\\BroShopAPI\\BroShopAPI\\Models\\Review.cs",
               "RelativeToolTip": "BroShopAPI\\Models\\Review.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -320,11 +335,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 15,
               "Title": "Cart.cs",
-              "DocumentMoniker": "C:\\Users\\joil\\Desktop\\(TheReal)CP_Project\\BroShopAPI\\BroShopAPI\\Models\\Cart.cs",
+              "DocumentMoniker": "C:\\Users\\joil\\Desktop\\CP_BroShop\\BroShopAPI\\BroShopAPI\\Models\\Cart.cs",
               "RelativeDocumentMoniker": "BroShopAPI\\Models\\Cart.cs",
-              "ToolTip": "C:\\Users\\joil\\Desktop\\(TheReal)CP_Project\\BroShopAPI\\BroShopAPI\\Models\\Cart.cs",
+              "ToolTip": "C:\\Users\\joil\\Desktop\\CP_BroShop\\BroShopAPI\\BroShopAPI\\Models\\Cart.cs",
               "RelativeToolTip": "BroShopAPI\\Models\\Cart.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -332,11 +347,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 17,
               "Title": "BrandsController.cs",
-              "DocumentMoniker": "C:\\Users\\joil\\Desktop\\(TheReal)CP_Project\\BroShopAPI\\BroShopAPI\\Controllers\\BrandsController.cs",
+              "DocumentMoniker": "C:\\Users\\joil\\Desktop\\CP_BroShop\\BroShopAPI\\BroShopAPI\\Controllers\\BrandsController.cs",
               "RelativeDocumentMoniker": "BroShopAPI\\Controllers\\BrandsController.cs",
-              "ToolTip": "C:\\Users\\joil\\Desktop\\(TheReal)CP_Project\\BroShopAPI\\BroShopAPI\\Controllers\\BrandsController.cs",
+              "ToolTip": "C:\\Users\\joil\\Desktop\\CP_BroShop\\BroShopAPI\\BroShopAPI\\Controllers\\BrandsController.cs",
               "RelativeToolTip": "BroShopAPI\\Controllers\\BrandsController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -344,11 +359,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 21,
               "Title": "ProductType.cs",
-              "DocumentMoniker": "C:\\Users\\joil\\Desktop\\(TheReal)CP_Project\\BroShopAPI\\BroShopAPI\\Models\\ProductType.cs",
+              "DocumentMoniker": "C:\\Users\\joil\\Desktop\\CP_BroShop\\BroShopAPI\\BroShopAPI\\Models\\ProductType.cs",
               "RelativeDocumentMoniker": "BroShopAPI\\Models\\ProductType.cs",
-              "ToolTip": "C:\\Users\\joil\\Desktop\\(TheReal)CP_Project\\BroShopAPI\\BroShopAPI\\Models\\ProductType.cs",
+              "ToolTip": "C:\\Users\\joil\\Desktop\\CP_BroShop\\BroShopAPI\\BroShopAPI\\Models\\ProductType.cs",
               "RelativeToolTip": "BroShopAPI\\Models\\ProductType.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -356,11 +371,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 20,
               "Title": "Product.cs",
-              "DocumentMoniker": "C:\\Users\\joil\\Desktop\\(TheReal)CP_Project\\BroShopAPI\\BroShopAPI\\Models\\Product.cs",
+              "DocumentMoniker": "C:\\Users\\joil\\Desktop\\CP_BroShop\\BroShopAPI\\BroShopAPI\\Models\\Product.cs",
               "RelativeDocumentMoniker": "BroShopAPI\\Models\\Product.cs",
-              "ToolTip": "C:\\Users\\joil\\Desktop\\(TheReal)CP_Project\\BroShopAPI\\BroShopAPI\\Models\\Product.cs",
+              "ToolTip": "C:\\Users\\joil\\Desktop\\CP_BroShop\\BroShopAPI\\BroShopAPI\\Models\\Product.cs",
               "RelativeToolTip": "BroShopAPI\\Models\\Product.cs",
               "ViewState": "AgIAAA4AAAAAAAAAAAAIwA8AAAApAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -368,11 +383,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 18,
               "Title": "AppDbContext.cs",
-              "DocumentMoniker": "C:\\Users\\joil\\Desktop\\(TheReal)CP_Project\\BroShopAPI\\BroShopAPI\\Data\\AppDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\joil\\Desktop\\CP_BroShop\\BroShopAPI\\BroShopAPI\\Data\\AppDbContext.cs",
               "RelativeDocumentMoniker": "BroShopAPI\\Data\\AppDbContext.cs",
-              "ToolTip": "C:\\Users\\joil\\Desktop\\(TheReal)CP_Project\\BroShopAPI\\BroShopAPI\\Data\\AppDbContext.cs",
+              "ToolTip": "C:\\Users\\joil\\Desktop\\CP_BroShop\\BroShopAPI\\BroShopAPI\\Data\\AppDbContext.cs",
               "RelativeToolTip": "BroShopAPI\\Data\\AppDbContext.cs",
               "ViewState": "AgIAAA8AAAAAAAAAAAAowBQAAAAyAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -380,11 +395,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 19,
               "Title": "ProductVariant.cs",
-              "DocumentMoniker": "C:\\Users\\joil\\Desktop\\(TheReal)CP_Project\\BroShopAPI\\BroShopAPI\\Models\\ProductVariant.cs",
+              "DocumentMoniker": "C:\\Users\\joil\\Desktop\\CP_BroShop\\BroShopAPI\\BroShopAPI\\Models\\ProductVariant.cs",
               "RelativeDocumentMoniker": "BroShopAPI\\Models\\ProductVariant.cs",
-              "ToolTip": "C:\\Users\\joil\\Desktop\\(TheReal)CP_Project\\BroShopAPI\\BroShopAPI\\Models\\ProductVariant.cs",
+              "ToolTip": "C:\\Users\\joil\\Desktop\\CP_BroShop\\BroShopAPI\\BroShopAPI\\Models\\ProductVariant.cs",
               "RelativeToolTip": "BroShopAPI\\Models\\ProductVariant.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -392,11 +407,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 23,
               "Title": "launchSettings.json",
-              "DocumentMoniker": "C:\\Users\\joil\\Desktop\\(TheReal)CP_Project\\BroShopAPI\\BroShopAPI\\Properties\\launchSettings.json",
+              "DocumentMoniker": "C:\\Users\\joil\\Desktop\\CP_BroShop\\BroShopAPI\\BroShopAPI\\Properties\\launchSettings.json",
               "RelativeDocumentMoniker": "BroShopAPI\\Properties\\launchSettings.json",
-              "ToolTip": "C:\\Users\\joil\\Desktop\\(TheReal)CP_Project\\BroShopAPI\\BroShopAPI\\Properties\\launchSettings.json",
+              "ToolTip": "C:\\Users\\joil\\Desktop\\CP_BroShop\\BroShopAPI\\BroShopAPI\\Properties\\launchSettings.json",
               "RelativeToolTip": "BroShopAPI\\Properties\\launchSettings.json",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
@@ -404,11 +419,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 24,
               "Title": "appsettings.Development.json",
-              "DocumentMoniker": "C:\\Users\\joil\\Desktop\\(TheReal)CP_Project\\BroShopAPI\\BroShopAPI\\appsettings.Development.json",
+              "DocumentMoniker": "C:\\Users\\joil\\Desktop\\CP_BroShop\\BroShopAPI\\BroShopAPI\\appsettings.Development.json",
               "RelativeDocumentMoniker": "BroShopAPI\\appsettings.Development.json",
-              "ToolTip": "C:\\Users\\joil\\Desktop\\(TheReal)CP_Project\\BroShopAPI\\BroShopAPI\\appsettings.Development.json",
+              "ToolTip": "C:\\Users\\joil\\Desktop\\CP_BroShop\\BroShopAPI\\BroShopAPI\\appsettings.Development.json",
               "RelativeToolTip": "BroShopAPI\\appsettings.Development.json",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
@@ -416,11 +431,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 25,
               "Title": "WeatherForecast.cs",
-              "DocumentMoniker": "C:\\Users\\joil\\Desktop\\(TheReal)CP_Project\\BroShopAPI\\BroShopAPI\\WeatherForecast.cs",
+              "DocumentMoniker": "C:\\Users\\joil\\Desktop\\CP_BroShop\\BroShopAPI\\BroShopAPI\\WeatherForecast.cs",
               "RelativeDocumentMoniker": "BroShopAPI\\WeatherForecast.cs",
-              "ToolTip": "C:\\Users\\joil\\Desktop\\(TheReal)CP_Project\\BroShopAPI\\BroShopAPI\\WeatherForecast.cs",
+              "ToolTip": "C:\\Users\\joil\\Desktop\\CP_BroShop\\BroShopAPI\\BroShopAPI\\WeatherForecast.cs",
               "RelativeToolTip": "BroShopAPI\\WeatherForecast.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",

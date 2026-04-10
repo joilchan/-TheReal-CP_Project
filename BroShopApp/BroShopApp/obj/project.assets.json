@@ -31004,11 +31004,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\joil\\Desktop\\(TheReal)CP_Project\\BroShopApp\\BroShopApp\\BroShopApp.csproj",
+      "projectUniqueName": "C:\\Users\\joil\\Desktop\\CP_BroShop\\BroShopApp\\BroShopApp\\BroShopApp.csproj",
       "projectName": "BroShopApp",
-      "projectPath": "C:\\Users\\joil\\Desktop\\(TheReal)CP_Project\\BroShopApp\\BroShopApp\\BroShopApp.csproj",
+      "projectPath": "C:\\Users\\joil\\Desktop\\CP_BroShop\\BroShopApp\\BroShopApp\\BroShopApp.csproj",
       "packagesPath": "C:\\Users\\joil\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\joil\\Desktop\\(TheReal)CP_Project\\BroShopApp\\BroShopApp\\obj\\",
+      "outputPath": "C:\\Users\\joil\\Desktop\\CP_BroShop\\BroShopApp\\BroShopApp\\obj\\",
       "projectStyle": "PackageReference",
       "crossTargeting": true,
       "fallbackFolders": [
